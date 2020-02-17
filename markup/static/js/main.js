@@ -19,6 +19,10 @@ import objectFitImages from 'object-fit-images';
 
 import ready from './documentReady.js';
 
+// import {example} from 'components/example/example';
+// example();
+
+
 ready(
     function () {
         // Polyfill for object-fit init
@@ -38,3 +42,4 @@ ready(
 // Imports components
 
 import 'components/example/example';
+import 'components/burger/burger';

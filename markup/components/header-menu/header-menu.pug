@@ -1,14 +1,27 @@
 mixin header-menu(data)
-    ul.header-menu
+    ul#header-menu.header-menu
+        li.header-menu__item.header-menu__item--active
+            a(href="#").header-menu__link
+                span Главная
+
+        li.header-menu__item.header-menu__item--drop
+            a(href="#").header-menu__link
+                span Каталог
+                != pugHelpers.Icon.call(locals, {iconName: "angle-down", className: "", iconWidth: "10", iconHeight: "6"})
+
+        li.header-menu__item.header-menu__item--drop
+            a(href="#").header-menu__link
+                span О компании
+                != pugHelpers.Icon.call(locals, {iconName: "angle-down", className: "", iconWidth: "10", iconHeight: "6"})
+
         li.header-menu__item
-            a(href="#").header-menu__link Главная
+            a(href="#").header-menu__link
+                span Новости
+
         li.header-menu__item
-            a(href="#").header-menu__link Каталог
+            a(href="#").header-menu__link
+                span Вакансии
+
         li.header-menu__item
-            a(href="#").header-menu__link О компании
-        li.header-menu__item
-            a(href="#").header-menu__link Новости
-        li.header-menu__item
-            a(href="#").header-menu__link Вакансии
-        li.header-menu__item
-            a(href="#").header-menu__link Контакты
+            a(href="#").header-menu__link
+                span Контакты

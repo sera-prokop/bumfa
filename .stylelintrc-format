@@ -64,7 +64,7 @@
                 ignore: ["after-comment"]
             }
         ],
-        "selector-max-compound-selectors": 2,
+        "selector-max-compound-selectors": 3,
         "selector-max-id": 0,
         "selector-max-type": 1,
         "selector-max-universal": 0,
@@ -79,7 +79,6 @@
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "string-quotes": "single",
-        "unit-blacklist": ["em", "rem"],
         "order/order": [
             "declarations",
             {
