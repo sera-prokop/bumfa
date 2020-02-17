@@ -10,6 +10,7 @@
     "ignoreFiles": ["./markup/static/scss/common.scss"],
     "defaultSeverity": "error",
     "rules": {
+        "value-list-max-empty-lines": 2,
         "at-rule-empty-line-before": [
             "always",
             {
