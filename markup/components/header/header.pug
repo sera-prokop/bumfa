@@ -1,0 +1,18 @@
+mixin header(data)
+    header.header
+        .header__container
+
+            .header__grid
+
+                a(href="/").header__logo
+                    img(src="%=static=%img/assets/header/logo.png" alt="alt")
+
+
+                .header__text
+                    p Мы работаем для того, чтобы создать чистый и красивый мир для своих потребителей
+
+                .header__menu
+                    +header-menu
+
+                .header__phone
+                    a(href="tel:+78782266366") +7 (8782) 26-63-66

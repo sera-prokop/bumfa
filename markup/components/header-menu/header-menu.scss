@@ -1,0 +1,10 @@
+.header-menu{
+    @include nl;
+    display: flex;
+}
+
+
+.header-menu__link{
+    display: inline-block;
+    padding: 10px 15px;
+}

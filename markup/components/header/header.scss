@@ -1,0 +1,46 @@
+.header__container {
+    @include container();
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.header__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__logo{
+    max-width: 120px;
+}
+
+
+.header__text{
+    max-width: 330px;
+
+    margin-left: 20px;
+
+
+
+    p{
+        position: relative;
+        color: #9d4dd6;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        padding-left: 20px;
+
+        &::before{
+            content: '';
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            background-color: #dadada;
+            left: 0;
+            top: 0;
+        }
+    }
+}
