@@ -1,5 +1,4 @@
 .footer {
-
     // test
     color: #7c8799;
     background-color: #020f22;
@@ -22,7 +21,6 @@
 }
 
 .footer__grid {
-    //display: flex;
     @include row();
 }
 
