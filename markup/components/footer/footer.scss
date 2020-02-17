@@ -1,10 +1,108 @@
 .footer {
-    background-color: #cccccc;
+
+    // test
+    color: #7c8799;
+    background-color: #020f22;
+
+    a {
+        color: #7c8799;
+    }
 }
 
 .footer__container {
     @include container();
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include min($screen-md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.footer__grid {
+    //display: flex;
+    @include row();
+}
+
+.footer__left {
+    @include col();
+    @include col(md, 8);
+    @include col(lg, 12);
+
+    @include min($screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.footer__block {
+    @include min($screen-md) {
+        width: 50%;
+    }
+}
+
+.footer__logo,
+.footer__contacts {
+    @include min($screen-lg) {
+        width: 25%;
+    }
+}
+
+.footer__menu,
+.footer__social {
+    @include min($screen-lg) {
+        width: 75%;
+    }
+}
+
+.footer__social {
+    display: flex;
+}
+
+.footer__menu-wrap {
+    @include min($screen-lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__right {
+    display: none;
+
+    @include min($screen-md) {
+        display: block;
+
+        @include col();
+        @include col(md, 4);
+    }
+
+    @include min($screen-lg) {
+        display: none;
+    }
+}
+
+.footer__logo {
+    a {
+        display: inline-block;
+        max-width: 120px;
+    }
+}
+
+.footer__list--mobile {
+    @include min($screen-md) {
+        display: none;
+    }
+
+    @include min($screen-lg) {
+        display: block;
+    }
+}
+
+.footer__title,
+.footer__text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #7c8799;
 }
