@@ -79,7 +79,6 @@
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "string-quotes": "single",
-        "max-empty-lines": "2"
         "unit-blacklist": ["em", "rem"],
         "order/order": [
             "declarations",
