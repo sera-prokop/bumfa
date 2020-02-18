@@ -43,3 +43,4 @@ ready(
 
 import 'components/example/example';
 import 'components/burger/burger';
+import 'components/main-slider/main-slider';
