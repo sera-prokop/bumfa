@@ -1,25 +1,54 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
 
-.btn{
+.btn {
     position: relative;
-    border: none;
     margin: 0;
+    padding: 0;
+    display: flex;
     overflow: visible;
-    text-align: inherit;
-    background: transparent;
+    width: 100%;
+    max-width: 230px;
+    height: 58px;
+    justify-content: center;
+    align-items: center;
     //color: inherit;
     font: inherit;
-    line-height: normal;
+    font-size: 14px;
+    line-height: 1;
+    text-align: inherit;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    transition: $transition-time;
+    cursor: pointer;
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
-    width: 100%;
-    text-decoration: none;
-    cursor: pointer;
-    transition: $transition-time;
+
+    @include min($screen-xl) {
+        max-width: 270px;
+        height: 67px;
+        font-size: 17px;
+    }
+}
+
+.btn--purple {
+    color: #ffffff;
+    background-color: #9d4dd6;
+
+    &:hover {
+        background-color: #732ea5;
+    }
+}
+
+.btn--icon-arrow {
+    &::after {
+        content: '';
+        margin-left: 15px;
+        width: 15px;
+        height: 20px;
+        background-image: svg-load('arrow-right.svg', fill= '#fff');
+        background-repeat: no-repeat;
+    }
 }
