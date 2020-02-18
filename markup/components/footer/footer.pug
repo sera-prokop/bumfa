@@ -7,7 +7,7 @@ mixin footer(data)
                 .footer__left
 
                     .footer__block.footer__logo
-                        a(href="#")
+                        a.footer__logo-link(href="#")
                             img(src="%=static=%img/assets/footer/logo-white.png" alt="alt")
 
                         .footer__text
@@ -83,14 +83,23 @@ mixin footer(data)
 
 
                     .footer__block.footer__social
-                        h4.footer__title Соц сети
 
-                        a(href="#").footer__social-link
-                        a(href="#").footer__social-link
-                        a(href="#").footer__social-link
+                        .footer__social-block
+
+                            h4.footer__title Соц сети
+
+                            .footer__social-wrap
+
+                                a(href="#").footer__social-link
+                                    != pugHelpers.Icon.call(locals, {iconName: "vk", className: "", iconWidth: "20", iconHeight: "20"})
+                                a(href="#").footer__social-link
+                                    != pugHelpers.Icon.call(locals, {iconName: "facebook-f", className: "", iconWidth: "20", iconHeight: "20"})
+                                a(href="#").footer__social-link
+                                    != pugHelpers.Icon.call(locals, {iconName: "instagram", className: "", iconWidth: "20", iconHeight: "20"})
 
 
                         .footer__dev
+                            //-!= pugHelpers.Icon.call(locals, {iconName: "max", className: "", iconWidth: "40", iconHeight: "40"})
                             p Сайт создан агентством
                                 =" "
                                 a(href="#") Максимизатор
