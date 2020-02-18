@@ -40,7 +40,7 @@
       "prettier --write",
       "stylelint --syntax=scss --fix --config ./.stylelintrc-format"
     ],
-    "./markup/*.js": [
+    "markup/**/*.js": [
       "prettier --write"
     ]
   }
