@@ -1,1 +1,0 @@
-var data = {'main-catalog': {}};
