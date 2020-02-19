@@ -82,6 +82,11 @@
         "string-no-newline": true,
         "string-quotes": "single",
         "order/order": [
+            {
+                "type": "at-rule",
+                "name": "include",
+                "parameter": "nl"
+            },
             "at-variables",
             "dollar-variables",
             "custom-properties",

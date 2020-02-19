@@ -167,11 +167,11 @@
     }
 
     .header-menu__content {
+        @include nl;
+
         padding: 20px 40px;
         display: none;
         background-color: #fafafa;
-
-        @include nl;
     }
 
     .header-menu__content-link {
