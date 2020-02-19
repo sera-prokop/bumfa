@@ -6,6 +6,14 @@ var data = {head: {
         main: {
             title: 'Главная страница',
             useSocialMetaTags: true
+        },
+        productionHead: {
+            title: 'Контрактное производство',
+            useSocialMetaTags: true
+        },
+        catalogHead: {
+            title: 'Контрактное производство',
+            useSocialMetaTags: true
         }
     }
 };

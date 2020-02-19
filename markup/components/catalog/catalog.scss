@@ -1,0 +1,69 @@
+.catalog {
+    //padding-top: 60px;
+
+    margin-bottom: 60px;
+
+    @include min($screen-md) {
+        padding-top: 50px;
+    }
+}
+
+.catalog__container {
+    @include container();
+}
+
+.catalog__row {
+    @include row();
+}
+
+.catalog__menu {
+    @include col();
+    @include col(md, 4);
+    @include col(lg, 3);
+
+    margin-bottom: 50px;
+}
+
+.catalog__descr {
+    @include col();
+    @include col(md, 8);
+    @include col(lg, 9);
+}
+
+.catalog__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+.catalog__text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6a6a6a;
+
+    @include min($screen-xl) {
+        font-size: 15px;
+    }
+
+    p {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+

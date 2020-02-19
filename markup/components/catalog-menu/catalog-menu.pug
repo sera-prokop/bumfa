@@ -1,0 +1,28 @@
+mixin catalog-menu(data)
+    ul.catalog-menu.sticky(data-sticky-for="768" data-margin-top="20")
+        li.catalog-menu__item
+            a(href="#disk" data-scroll).catalog-menu__link
+                != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Ватные палочки
+
+        li.catalog-menu__item
+            a(href="#stick" data-scroll).catalog-menu__link
+                != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Ватные диски
+
+        li.catalog-menu__item
+            a(href="#napkin" data-scroll).catalog-menu__link
+                != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Влажные салфетки
+
+        li.catalog-menu__item
+            a(href="#wrap" data-scroll).catalog-menu__link
+                != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Бумажная продукция
+
+        li.catalog-menu__item
+            a(href="#non-stop" data-scroll).catalog-menu__link
+                != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Прочее
+
+
