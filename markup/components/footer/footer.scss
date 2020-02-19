@@ -1,0 +1,272 @@
+.footer {
+    background-color: #020f22;
+}
+
+.footer__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include min($screen-md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include container();
+}
+
+.footer__grid {
+    @include row();
+}
+
+.footer__left {
+    @include min($screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include min($screen-lg) {
+        justify-content: space-between;
+    }
+
+    @include col();
+    @include col(md, 8);
+    @include col(lg, 12);
+}
+
+.footer__block {
+    @include min($screen-md) {
+        width: 50%;
+    }
+}
+
+.footer__logo,
+.footer__contacts {
+    @include min($screen-lg) {
+        width: 20%;
+    }
+}
+
+//.footer__contacts{
+//    @include min($screen-lg) {
+//        width: 20%;
+//    }
+//}
+
+.footer__menu,
+.footer__social {
+    @include min($screen-lg) {
+        width: 70%;
+    }
+}
+
+.footer__menu {
+    margin-bottom: 45px;
+
+    @include min($screen-xl) {
+        width: 45%;
+    }
+}
+
+.footer__social {
+    @include min($screen-lg) {
+        display: flex;
+    }
+
+    @include min($screen-xl) {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+.footer__menu-wrap {
+    @include min($screen-lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__right {
+    margin-top: 37px;
+    display: none;
+
+    @include min($screen-md) {
+        display: block;
+
+        @include col();
+        @include col(md, 4);
+    }
+
+    @include min($screen-lg) {
+        display: none;
+    }
+}
+
+.footer__list--mobile {
+    @include min($screen-md) {
+        display: none;
+    }
+
+    @include min($screen-lg) {
+        display: block;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 35px;
+}
+
+.footer__logo-link {
+    margin-bottom: 20px;
+    display: inline-block;
+    max-width: 120px;
+}
+
+.footer__title,
+.footer__text {
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7c8799;
+}
+
+.footer__title {
+    @include min($screen-xl) {
+        margin-bottom: 30px;
+    }
+}
+
+.footer__conf {
+    font-size: 14px;
+    font-weight: 300;
+    color: #7c8799;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.footer__link {
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #d1d7e0;
+    border-bottom: 1px solid transparent;
+    transition: color $transition-time, border $transition-time;
+
+    &:focus,
+    &:hover {
+        color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+    }
+}
+
+.footer__field {
+    margin-bottom: 20px;
+
+    h5 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: #7c8799;
+    }
+
+    a {
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #d1d7e0;
+        border-bottom: 1px solid transparent;
+        transition: color $transition-time, border $transition-time;
+
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+}
+
+.footer__social-block {
+    @include min($screen-xl) {
+        width: 20%;
+        //margin-left: auto;
+    }
+
+    .footer__title {
+        @include min($screen-xl) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.footer__social-wrap {
+    margin-bottom: 15px;
+    display: flex;
+
+    @include min($screen-xl) {
+        margin-bottom: 0;
+    }
+}
+
+.footer__social-link {
+    margin-right: 10px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c8799;
+    border-radius: 50%;
+    transition: background-color $transition-time;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #ffffff;
+    }
+}
+
+.footer__dev {
+    display: flex;
+    fill: #7c8799;
+    color: #7c8799;
+
+    @include min($screen-lg) {
+        margin-top: 37px;
+        margin-left: 100px;
+    }
+
+    @include min($screen-xl) {
+        width: 20%;
+    }
+
+    &::before {
+        content: '';
+        margin-right: 12px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        background-image: url('%=static=%assets/footer/dev-icon.png');
+        background-size: cover;
+    }
+
+    a {
+        display: block;
+        color: #7c8799;
+        //text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    p {
+        line-height: 1.2;
+    }
+}
