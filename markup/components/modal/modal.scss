@@ -7,6 +7,8 @@
 }
 
 .modal {
+    $block-name: &; // #{$block-name}__element
+
     position: fixed;
     z-index: $z-index-modal;
     top: 0;
@@ -106,7 +108,6 @@
             }
         }
     }
-    $block-name: &; // #{$block-name}__element
 }
 
 @keyframes modal-backdrop-show {
