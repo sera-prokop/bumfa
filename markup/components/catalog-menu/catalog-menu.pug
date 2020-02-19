@@ -25,4 +25,12 @@ mixin catalog-menu(data)
                 != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
                 span Прочее
 
+        li.catalog-menu__item.catalog-menu__item--last
+            a(href="#non-stop" data-scroll).catalog-menu__link
+                != pugHelpers.Icon.call(locals, {iconName: "airport-ic", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Каталог продукции
+                    span Скачать каталог
+
+
+
 

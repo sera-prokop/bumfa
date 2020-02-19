@@ -4,10 +4,16 @@
     border-radius: 7px;
 }
 
-.catalog-menu__item.active {
-    .catalog-menu__link {
-        font-weight: 500;
-        color: #9d4dd6;
+.catalog-menu__item {
+    &.active {
+        .catalog-menu__link {
+            font-weight: 500;
+            color: #9d4dd6;
+        }
+    }
+
+    &--last {
+        margin-top: 11px;
     }
 }
 
@@ -28,4 +34,3 @@
     flex-shrink: 0;
     color: #9d4dd6;
 }
-
