@@ -57,7 +57,7 @@
         "no-descending-specificity": null,
         "no-invalid-double-slash-comments": true,
         "number-leading-zero": "never",
-        "property-blacklist": ["flex", "order"],
+        "property-blacklist": [],
         "property-no-unknown": true,
         "rule-empty-line-before": [
             "always-multi-line",

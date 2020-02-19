@@ -110,3 +110,7 @@ select {
         scroll-behavior: auto !important;
     }
 }
+
+.container {
+    @include container();
+}
