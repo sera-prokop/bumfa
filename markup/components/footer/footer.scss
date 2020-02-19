@@ -233,6 +233,7 @@
 .footer__dev {
     display: flex;
     fill: #7c8799;
+    color: #7c8799;
 
     @include min($screen-lg) {
         margin-top: 37px;

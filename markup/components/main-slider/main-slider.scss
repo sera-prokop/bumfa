@@ -13,10 +13,10 @@
 }
 
 .main-slider__container {
-    @include container();
-
     position: absolute;
     bottom: 60px;
+    //@include container();
+    width: 100%;
 
     @include min($screen-md) {
         z-index: 1;
@@ -40,6 +40,8 @@
 
 .main-slider__prev,
 .main-slider__next {
+    top: auto;
+    bottom: 30px;
     width: 55px;
     height: 55px;
     background-color: #ffffff;
@@ -47,6 +49,14 @@
     border-radius: 50%;
     box-shadow: -2px 13px 21px rgba(0, 0, 0, .09);
     transition: border $transition-time;
+
+    @include min($screen-md) {
+        //z-index: 1;
+        top: 50%;
+        //left: 50%;
+        margin-top: 0;
+        transform: translateY(-50%);
+    }
 
     &::before {
         content: '';
