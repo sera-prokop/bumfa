@@ -33,9 +33,15 @@ ready(function() {
         NodeList.prototype.forEach = Array.prototype.forEach;
     }
 
-    const scroll = new SmoothScroll('.smooth-scroll');
-    const spy = new Gumshoe('.gumshoe');
-    const sticky = new Sticky('.sticky');
+    if ($('.smooth-scroll').length) {
+        const scroll = new SmoothScroll('.smooth-scroll');
+    }
+    if ($('.gumshoe').length) {
+        const spy = new Gumshoe('.gumshoe');
+    }
+    if ($('.sticky').length) {
+        const sticky = new Sticky('.sticky');
+    }
 });
 
 // Imports components
@@ -45,4 +51,5 @@ import 'components/burger/burger';
 import 'components/main-slider/main-slider';
 import 'components/modal/modal';
 import 'components/header-menu/header-menu';
+import 'components/sort-field/sort-field';
 // import 'components/production-menu/production-menu';

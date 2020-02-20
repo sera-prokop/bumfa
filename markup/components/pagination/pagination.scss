@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока pagination, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.pagination {
+    margin-top: $typo-margin-vertical;
+    margin-bottom: $typo-margin-vertical;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        // border: 1px solid $border-color;
+        padding: .3em .6em;
+        display: block;
+        min-width: 2em;
+        text-align: center;
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $text-color;
+        }
+
+        & + & {
+            border-left: 0;
+        }
+
+        &--active {
+            background-color: $gray-lightest;
+        }
+
+        @at-root a#{&} {
+            &:hover,
+            &:focus {
+                background-color: $gray-lightest;
+            }
+        }
+
+        @at-root span#{&} {
+            cursor: default;
+        }
+    }
+}

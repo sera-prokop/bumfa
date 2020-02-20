@@ -68,5 +68,23 @@
 }
 
 .catalog__sort {
+    margin-bottom: 30px;
+    display: flex;
+
+    @include min($screen-xl) {
+        margin-bottom: 50px;
+    }
+}
+
+.catalog__list {
+    @include row($grid-gutter-width, 20px, 20px, 30px, $grid-gutter-width, $grid-gutter-width);
+}
+
+.catalog__card {
+    @include col();
+    @include col(sm, 6, $grid-columns, 20px);
+    @include col(lg, 4, $grid-columns, 30px);
+    @include col(xl, 4, $grid-columns, $grid-gutter-width);
+
     display: flex;
 }

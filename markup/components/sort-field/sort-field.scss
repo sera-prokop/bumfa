@@ -1,25 +1,13 @@
 .sort-field {
     position: relative;
+    margin-right: 40px;
+    width: 90px;
 
     &:hover,
     &:focus {
         .sort-field__dropdown {
             visibility: visible;
             opacity: 1;
-        }
-    }
-
-    .sort-field__link {
-        padding-right: 5px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -18px;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background-color: transparent;
         }
     }
 
@@ -32,6 +20,25 @@
             }
         }
     }
+}
+
+.sort-field__wrap {
+    //margin-right: 40px;
+    //width: 90px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: transparent;
+    }
+
+    //&:last-child{
+    //    margin-right: 0;
+    //}
 }
 
 .sort-field__top {
@@ -60,7 +67,7 @@
 
     position: absolute;
     z-index: 101;
-    top: 50px;
+    top: 60px;
     left: 50%;
     padding: 20px 30px;
     visibility: hidden;
