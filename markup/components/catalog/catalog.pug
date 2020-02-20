@@ -78,3 +78,10 @@ mixin catalog(data)
                             +catalog-card('img-6.png', 'Ватная продукция для детской гигиены')
 
 
+                    .catalog__pagination
+                        +pagination()
+                            +pagination-item('1', '/1', true)
+                            +pagination-item('2', '/2')
+                            +pagination-item('3', '/3')
+                            +pagination-item('...')
+                            +pagination-item('9', '/9')

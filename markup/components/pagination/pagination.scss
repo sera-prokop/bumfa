@@ -3,38 +3,47 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .pagination {
-    margin-top: $typo-margin-vertical;
-    margin-bottom: $typo-margin-vertical;
+    //margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
 
     &__item {
-        // border: 1px solid $border-color;
-        padding: .3em .6em;
-        display: block;
-        min-width: 2em;
-        text-align: center;
+        margin-right: 15px;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 500;
         text-decoration: none;
-        color: $text-color;
+        color: #444344;
+        background-color: #ffffff;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        transition: border $transition-time;
+
+        @include min($screen-lg) {
+            width: 50px;
+            height: 50px;
+            font-size: 17px;
+        }
 
         &:hover,
         &:focus {
             text-decoration: none;
-            color: $text-color;
-        }
-
-        & + & {
-            border-left: 0;
         }
 
         &--active {
-            background-color: $gray-lightest;
+            color: #ffffff;
+            background-color: #9d4dd6;
         }
 
         @at-root a#{&} {
             &:hover,
             &:focus {
-                background-color: $gray-lightest;
+                border: 1px solid #9d4dd6;
+                //background-color: $gray-lightest;
             }
         }
 
