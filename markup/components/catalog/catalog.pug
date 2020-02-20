@@ -10,7 +10,52 @@ mixin catalog(data)
 
 
                 .catalog__descr
-                    h2.catalog__title Контрактное производство
+                    h2.catalog__title Каталог продукции
+
+                    .catalog__sort
+
+                        .catalog__sort-field
+
+                            +sort-field(
+                                'Новинки',
+                                [
+                                    {
+                                        'title': 'Safira',
+                                        'img': '4'
+                                    },
+                                    {
+                                        'title': 'Welma',
+                                        'img': '5'
+                                    },
+                                ]
+                            )
+
+                        .catalog__sort-field
+                            +sort-field(
+                                'Бренды',
+                                [
+                                    {
+                                        'title': 'Premial',
+                                        'img': '1'
+                                    },
+                                    {
+                                        'title': 'Amra',
+                                        'img': '2'
+                                    },
+                                    {
+                                        'title': 'Safira',
+                                        'img': '4'
+                                    },
+                                    {
+                                        'title': 'Welma',
+                                        'img': '5'
+                                    },
+                                    {
+                                        'title': 'Amra',
+                                        'img': '2'
+                                    },
+                                ]
+                            )
 
                     .catalog__text
                         p <strong>ООО «Бумфа Групп»</strong> выражает Вам свое почтение и хочет предложить плодотворное и взаимовыгодное сотрудничество!
