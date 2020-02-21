@@ -1,20 +1,24 @@
-var data = {head: {
+var data = {
+    head: {
         defaults: {
             title: 'default title',
-            useSocialMetaTags: true
+            useSocialMetaTags: true,
         },
         main: {
             title: 'Главная страница',
-            useSocialMetaTags: true
+            useSocialMetaTags: true,
         },
         productionHead: {
             title: 'Контрактное производство',
-            useSocialMetaTags: true
+            useSocialMetaTags: true,
         },
         catalogHead: {
             title: 'Контрактное производство',
-            useSocialMetaTags: true
-        }
-    }
+            useSocialMetaTags: true,
+        },
+        aboutHead: {
+            title: 'О компании',
+            useSocialMetaTags: true,
+        },
+    },
 };
-
