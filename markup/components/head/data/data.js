@@ -19,6 +19,6 @@ var data = {
         aboutHead: {
             title: 'О компании',
             useSocialMetaTags: true,
-        },
-    },
+        }
+    }
 };
