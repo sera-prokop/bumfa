@@ -8,6 +8,12 @@
     }
 }
 
+.about__wrap {
+    &--white {
+        background-color: #ffffff;
+    }
+}
+
 .about__container {
     @include container();
 }

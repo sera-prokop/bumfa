@@ -6,6 +6,14 @@
     }
 }
 
+.about-descr__edge {
+    margin-bottom: 60px;
+
+    @include min($screen-lg) {
+        margin-bottom: 80px;
+    }
+}
+
 .about-descr__edge-item {
     margin-bottom: 40px;
     padding: 20px 20px 35px;
@@ -14,6 +22,16 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &--no-icon {
+        .about-descr__edge-icon {
+            display: none;
+        }
+
+        .about-descr__edge-title {
+            margin-left: 0;
+        }
     }
 }
 
@@ -90,5 +108,23 @@
 
     @include min($screen-lg) {
         font-size: 15px;
+    }
+}
+
+.about-descr__management {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include min($screen-lg) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+.about-descr__gallery {
+    padding-top: 50px;
+
+    @include min($screen-lg) {
+        padding-top: 70px;
     }
 }
