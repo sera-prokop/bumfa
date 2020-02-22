@@ -3,19 +3,19 @@
 @mixin nl {
     margin: 0;
     padding: 0;
-    text-indent: 0;
     list-style: none;
     list-style-position: outside;
+    text-indent: 0;
 }
 
 @mixin cf {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
+        content: '';
         display: table;
-        content: "";
     }
 
-    &:after {
+    &::after {
         clear: both;
     }
 
@@ -30,13 +30,11 @@
 }
 
 // You can add your own mixins here:
-@mixin min($val){
-    @media screen and (min-width: $val){
-        @content
+@mixin min($val) {
+    @media screen and (min-width: $val) {
+        @content;
     }
 }
-
-
 
 // Browser Prefixes
 @mixin transform($transforms) {
@@ -47,7 +45,7 @@
 }
 
 // Rotate
-@mixin rotate ($deg) {
+@mixin rotate($deg) {
     @include transform(rotate(#{$deg}deg));
 }
 
@@ -57,51 +55,47 @@
 }
 
 // Translate
-@mixin translate ($x, $y) {
+@mixin translate($x, $y) {
     @include transform(translate($x, $y));
 }
 
 // Skew
-@mixin skew ($x, $y) {
+@mixin skew($x, $y) {
     @include transform(skew(#{$x}deg, #{$y}deg));
 }
 
 // Transform Origin
-@mixin transform-origin ($origin) {
+@mixin transform-origin($origin) {
     -webkit-transform-origin: $origin;
     -moz-transform-origin: $origin;
     -ms-transform-origin: $origin;
     transform-origin: $origin;
 }
 
-
-
-@mixin focus-shadow{
-    box-shadow: 0 0 3px 2px rgba($color-main, 0.2);
+@mixin focus-shadow {
+    box-shadow: 0 0 3px 2px rgba($color-main, .2);
 }
 
-
-
 @mixin field-name {
+    margin-bottom: .4em;
     display: block;
-    margin-bottom: 0.4em;
     line-height: $line-height;
     font-weight: 700;
 }
 
 @mixin field-text {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
+    //min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
     margin: 0;
+    padding: $field-padding-vertical $field-padding-horizontal;
+    display: inline-block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: $line-height;
+    vertical-align: middle;
+    background-color: #ffffff;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    line-height: $line-height;
-    font-size: 1em;
-    font-family: inherit;
-    background-color: #fff;
     -moz-appearance: textfield; // stylelint-disable-line
     appearance: textfield;
 
@@ -111,8 +105,8 @@
 
     &[disabled],
     &[readonly] {
-        cursor: not-allowed;
         background-color: $gray-lighter;
+        cursor: not-allowed;
     }
 
     &::-webkit-search-cancel-button,
@@ -127,8 +121,8 @@
     }
 
     &::placeholder {
-        color: $text-color-muted;
         opacity: 1;
+        color: $text-color-muted;
     }
 }
 
@@ -137,3 +131,15 @@
     box-shadow: 0 0 0 2px rgba($color-main, $opacity);
 }
 
+@mixin field-help-text {
+    padding-top: .4em;
+    display: block;
+    font-size: $font-size-sm;
+    line-height: 1.2em;
+    color: $text-color-muted;
+
+    &:empty {
+        // stylelint-disable-line
+        display: none;
+    }
+}

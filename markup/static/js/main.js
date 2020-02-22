@@ -42,6 +42,9 @@ ready(function() {
     if ($('.sticky').length) {
         const sticky = new Sticky('.sticky');
     }
+    $('.phone-mask').mask('+7 (000) 000-00-00', {placeholder: '+7 (976) 231-32-43'});
+
+    autosize($('textarea'));
 });
 
 // Imports components
@@ -52,4 +55,5 @@ import 'components/main-slider/main-slider';
 import 'components/modal/modal';
 import 'components/header-menu/header-menu';
 import 'components/sort-field/sort-field';
+import 'components/file-upload/file-upload';
 // import 'components/production-menu/production-menu';

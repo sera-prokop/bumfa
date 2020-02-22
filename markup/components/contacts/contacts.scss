@@ -1,0 +1,165 @@
+.contacts-wrap {
+    background-color: #fafafa;
+
+    .breadcrumbs {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.contacts {
+    padding-bottom: 50px;
+    background-image: url('%=static=%assets/contacts/bg.png');
+    background-repeat: no-repeat;
+    background-position: -90px 0;
+
+    @include min($screen-lg) {
+        background-position: calc(50% - 530px) 0;
+    }
+
+    @include min($screen-lg) {
+        padding-bottom: 70px;
+    }
+
+    @include min($screen-xl) {
+        background-position: calc(50% - 730px) 0;
+    }
+}
+
+.contacts__container {
+    @include container();
+}
+
+.contacts__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+.contacts__wrap {
+    position: relative;
+    padding-bottom: 80px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        height: 1px;
+        background-color: #e7e7e7;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.contacts__item {
+    margin-bottom: 30px;
+    display: flex;
+
+    @include min($screen-lg) {
+        margin-bottom: 35px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__icon {
+    position: relative;
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #ffffff;
+    background-image: linear-gradient(-219deg, #a573d9 0%, #9865ce 100%);
+    border-radius: 50%;
+
+    @include min($screen-lg) {
+        width: 42px;
+        height: 42px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #f3eff7;
+        border-radius: 50%;
+
+        @include min($screen-lg) {
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    svg {
+        @include min($screen-lg) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.contacts__text {
+    font-size: 14px;
+    color: #444344;
+
+    h4 {
+        font-weight: 600;
+
+        @include min($screen-lg) {
+            font-size: 15px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #444344;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.contacts__phone,
+.contacts__mail,
+.contacts__address {
+    font-weight: 400;
+
+    @include min($screen-lg) {
+        font-size: 16px;
+    }
+}
