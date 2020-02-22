@@ -20,7 +20,8 @@
     // embed,
     // object,
     iframe,
-    video {
+    video,
+    img {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -35,6 +36,14 @@
 
         &::before {
             padding-top: percentage(3 / 4);
+        }
+    }
+
+    &--contacts {
+        // модификатор на случай вставки 4/3
+
+        &::before {
+            padding-top: 35%;
         }
     }
 }
