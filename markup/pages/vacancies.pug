@@ -1,0 +1,15 @@
+extends templates/_template
+
+
+block head
+    +head(head.blogHead)
+
+block content
+    +header
+    .vacancies-wrapper
+        .container
+            +breadcrumbs('blog')
+                +breadcrumbs-item('Главная', '/')
+                +breadcrumbs-item('Вакансии')
+
+        +vacancies

@@ -1,0 +1,117 @@
+.vacancies-wrapper {
+    background-color: #fafafa;
+}
+
+.vacancies__container {
+    @include container();
+}
+
+.vacancies__wrapper {
+    padding-bottom: 20px;
+
+    @include min($screen-xl) {
+        padding-bottom: 40px;
+    }
+}
+
+.vacancies__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        font-size: 42px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+}
+
+.vacancies__subtitle {
+    margin-bottom: 30px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        font-size: 27px;
+    }
+
+    @include min($screen-xl) {
+        font-size: 30px;
+    }
+}
+
+.vacancies__row {
+    @include row();
+}
+
+.vacancies__item {
+    @include col();
+    @include col(md, 6);
+
+    margin-bottom: 25px;
+}
+
+.vacancies__item-wrap {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    //transition: box-shadow $transition-time;
+    border-radius: 13px;
+    box-shadow: -5px 21px 21px rgba(0, 0, 0, .04);
+
+    @include min($screen-xl) {
+        padding: 35px 30px;
+    }
+
+    &:hover {
+        //box-shadow: 0 34px 23px rgba(0, 0, 0, 0.13);
+    }
+}
+
+.vacancies__item-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-xl) {
+        margin-bottom: 25px;
+        font-size: 22px;
+    }
+}
+
+.vacancies__item-list {
+    margin-bottom: 15px;
+
+    @include min($screen-xl) {
+        margin-bottom: 20px;
+    }
+}
+
+.vacancies__item-item {
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+    color: #949494;
+
+    &::before {
+        content: '';
+        top: 10px;
+        left: 0;
+        margin-right: 10px;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        flex-shrink: 0;
+        vertical-align: middle;
+        background-color: #9d4dd6;
+        border-radius: 50%;
+    }
+}

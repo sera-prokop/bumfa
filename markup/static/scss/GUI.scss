@@ -44,6 +44,20 @@
     }
 }
 
+.btn--white {
+    font-size: 15px;
+    font-weight: 400;
+    color: #444344;
+    background-color: #ffffff;
+    box-shadow: 15px 15px 35px rgba(#a3a3a3, .29);
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: #a35cd6;
+    }
+}
+
 .btn--icon-arrow {
     &::after {
         content: '';
