@@ -2,6 +2,19 @@
     background-color: #fafafa;
 }
 
+.vacancies {
+    @include min($screen-lg) {
+        background-image: url('%=static=%assets/vacancies/decor-1.png'),
+            url('%=static=%assets/vacancies/decor-2.png');
+        background-repeat: no-repeat;
+        background-position: calc(50% - 550px) 0, calc(50% + 550px) 0;
+    }
+
+    @include min($screen-xl) {
+        background-position: calc(50% - 700px) 0, calc(50% + 700px) 0;
+    }
+}
+
 .vacancies__container {
     @include container();
 }
