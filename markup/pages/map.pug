@@ -2,14 +2,16 @@ extends templates/_template
 
 
 block head
-    +head(head.vacanciesHead)
+    +head(head.mapHead)
 
 block content
     +header
-    .vacancies-wrapper
+
+    .map-wrapper
         .container
             +breadcrumbs('blog')
                 +breadcrumbs-item('Главная', '/')
-                +breadcrumbs-item('Вакансии')
+                +breadcrumbs-item('Карта дистрибьюции')
 
-        +vacancies
+        +map
+

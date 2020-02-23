@@ -19,9 +19,11 @@
 
     // embed,
     // object,
+    /* stylelint-disable */
     iframe,
     video,
-    img {
+    img,
+    > ymaps {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -30,6 +32,7 @@
         height: 100%;
         border: 0;
     }
+    /* stylelint-enable */
 
     &--4-3 {
         // модификатор на случай вставки 4/3
@@ -53,6 +56,27 @@
 
         &::before {
             padding-top: 75%;
+        }
+    }
+
+    &--map {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &::before {
+            padding-top: 55%;
+
+            @include min($screen-md) {
+                padding-top: 40%;
+            }
+
+            @include min($screen-lg) {
+                padding-top: 35%;
+            }
+
+            @include min($screen-xl) {
+                padding-top: 25%;
+            }
         }
     }
 }

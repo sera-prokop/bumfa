@@ -131,3 +131,66 @@
 .contacts-form__file-checkbox {
     text-align: left;
 }
+
+// Form map style
+
+.contacts-form--map {
+    text-align: left;
+    background-color: transparent;
+    background-image: none;
+
+    .contacts-form__text {
+        margin: 0 0 30px;
+        max-width: 490px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #444344;
+
+        @include min($screen-md) {
+            margin-bottom: 60px;
+            font-size: 21px;
+            font-weight: 500;
+            color: #5b5b5b;
+        }
+    }
+
+    .contacts-form__wrapper {
+        margin: 0;
+        max-width: 850px;
+    }
+
+    .contacts-form__field {
+        @include col();
+        @include col(md, 6);
+        @include col(lg, 4);
+
+        &--file {
+            @include col(md, 12);
+            @include col(lg, 8);
+
+            @include min($screen-lg) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .contacts-form__file-upload {
+        //margin-bottom: 0;
+        margin-top: 15px;
+        margin-bottom: 1px;
+        max-width: 415px;
+
+        @include min($screen-lg) {
+            margin-top: auto;
+        }
+
+        label {
+            padding: 5.5px;
+
+            @include min($screen-xl) {
+                padding: 9px;
+            }
+        }
+    }
+}

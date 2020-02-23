@@ -50,3 +50,42 @@ mixin contacts-form(data)
 
                 button(type="submit").btn.btn--purple.btn--icon-arrow Отправить
             //TODO: validation styles
+
+
+
+
+mixin contacts-form-map(data)
+    section.contacts-form.contacts-form--map
+
+        .contacts-form__container
+
+            .contacts-form__wrapper
+
+                h2.contacts-form__title Стать партнером
+                p.contacts-form__text Мы открыты новым контактам и заинтересованы в развитии нашего бизнеса
+
+                .contacts-form__row
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="name") Ваше имя
+                        input.contacts-form__input(id="name" placeholder="Александр")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="phone") Ваш телефон
+                        input.contacts-form__input.phone-mask(id="phone")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="email") Ваша почта
+                        input.contacts-form__input(id="email" placeholder="support@gmail.com")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="theme") Тема письма
+                        input.contacts-form__input(id="theme" placeholder="Вопрос сотрудничества")
+
+                    .contacts-form__field.contacts-form__field--file
+                        .contacts-form__file-upload
+                            +file-upload('paperclip', 'Загрузите презентацию вашей компании <i>до 30 мб</i>', 1)
+
+
+
+                button(type="submit").btn.btn--purple Отправить форму

@@ -27,6 +27,18 @@ var data = {
         blogHead: {
             title: 'Блог',
             useSocialMetaTags: true,
+        },
+        vacanciesHead: {
+            title: 'Вакансии',
+            useSocialMetaTags: true,
+        },
+        c404Head: {
+            title: '404',
+            useSocialMetaTags: true,
+        },
+        mapHead: {
+            title: 'Карта дистрибьюции',
+            useSocialMetaTags: true,
         }
     }
 };
