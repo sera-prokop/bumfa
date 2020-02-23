@@ -46,4 +46,13 @@
             padding-top: 35%;
         }
     }
+
+    &--blog {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &::before {
+            padding-top: 75%;
+        }
+    }
 }

@@ -1,0 +1,42 @@
+mixin design(data)
+    section.catalog.catalog--design(data-sticky-container)
+        .catalog__container
+
+            .catalog__row
+
+                .catalog__menu
+                    +catalog-menu
+
+
+
+                .catalog__descr
+                    h2.catalog__title Магазин готовых дизайнов
+
+                    .catalog__list
+
+                        .catalog__card
+                            +catalog-card('design-1.png', 'Частная марка Safira')
+
+                        .catalog__card
+                            +catalog-card('design-1.png', 'Частная марка Safira')
+
+                        .catalog__card
+                            +catalog-card('design-1.png', 'Частная марка Safira')
+
+                        .catalog__card
+                            +catalog-card('design-1.png', 'Частная марка Safira')
+
+                        .catalog__card
+                            +catalog-card('design-1.png', 'Частная марка Safira')
+
+                        .catalog__card
+                            +catalog-card('design-1.png', 'Частная марка Safira')
+
+
+                    .catalog__pagination
+                        +pagination()
+                            +pagination-item('1', '/1', true)
+                            +pagination-item('2', '/2')
+                            +pagination-item('3', '/3')
+                            +pagination-item('...')
+                            +pagination-item('9', '/9')

@@ -13,11 +13,19 @@ var data = {
             useSocialMetaTags: true,
         },
         catalogHead: {
-            title: 'Контрактное производство',
+            title: 'Каталог',
             useSocialMetaTags: true,
         },
         aboutHead: {
             title: 'О компании',
+            useSocialMetaTags: true,
+        },
+        designHead: {
+            title: 'Магазин готовых дизайнов',
+            useSocialMetaTags: true,
+        },
+        blogHead: {
+            title: 'Блог',
             useSocialMetaTags: true,
         }
     }

@@ -1,0 +1,15 @@
+extends templates/_template
+
+
+block head
+    +head(head.designHead)
+
+block content
+    +header
+    .container
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Каталог продукции', 'catalog.html')
+            +breadcrumbs-item('Ватные диски')
+
+    +design

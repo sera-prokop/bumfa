@@ -1,4 +1,4 @@
-mixin catalog-menu(data)
+mixin catalog-menu(last)
     .catalog-menu.sticky(data-sticky-for="768" data-margin-top="20")
         ul.catalog-menu__list
             li.catalog-menu__item
@@ -26,15 +26,16 @@ mixin catalog-menu(data)
                     != pugHelpers.Icon.call(locals, {iconName: "box-open", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
                     span Прочее
 
-        ul.catalog-menu__list
+        if last
+            ul.catalog-menu__list
 
-            li.catalog-menu__item.catalog-menu__item--last
-                a(href="#").catalog-menu__link
-                    .catalog-menu__img
-                        img(src="%=static=%img/assets/catalog-menu/icon.png" alt="alt")
-                    .catalog-menu__text
-                        span Каталог продукции
-                        span Скачать каталог
+                li.catalog-menu__item.catalog-menu__item--last
+                    a(href="#").catalog-menu__link
+                        .catalog-menu__img
+                            img(src="%=static=%img/assets/catalog-menu/icon.png" alt="alt")
+                        .catalog-menu__text
+                            span Каталог продукции
+                            span Скачать каталог
 
 
 

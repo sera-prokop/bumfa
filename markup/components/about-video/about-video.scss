@@ -150,6 +150,12 @@
         margin-bottom: 12px;
     }
 
+    &:hover {
+        .about-video__small-text {
+            text-decoration: underline;
+        }
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
