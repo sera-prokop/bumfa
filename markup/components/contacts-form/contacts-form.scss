@@ -138,6 +138,23 @@
     text-align: left;
 }
 
+.contacts-form__error {
+    margin-bottom: 20px;
+
+    @include col();
+
+    .error {
+        margin-bottom: 10px;
+        padding: 15px 20px;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #e66464;
+        border-radius: 5px;
+    }
+}
+
 // Form map style
 
 .contacts-form--map {

@@ -10,6 +10,12 @@ mixin contacts-form(data)
 
                 .contacts-form__row
 
+                    .contacts-form__error
+                        .error
+                            span Введите корректное поле «Ваше имя»
+                        .error
+                            span Введите корректное вашу почту
+
                     .contacts-form__field
                         label.contacts-form__label(for="name") Ваше имя
                         input.contacts-form__input(id="name" placeholder="Александр")
