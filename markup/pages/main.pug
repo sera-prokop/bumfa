@@ -1,0 +1,31 @@
+extends templates/_template
+
+
+block head
+    +head(head.listHead)
+
+block content
+    +header
+
+    ul.index__list(style="display: flex;flex-direction: column; max-width: 1280px; margin: 40px auto")
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="index.html").index__link Главная
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="404.html").index__link 404
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="about.html").index__link О компании
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="blog.html").index__link Блог
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="catalog.html").index__link Каталог
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="contacts.html").index__link Контакты
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="design.html").index__link Магазин готовых дизайнов
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="map.html").index__link Карта дистрибьюции
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="production.html").index__link Контрактное производство
+        li.index__item
+            a(style="font-size: 18px; line-height: 2" href="vacancies.html").index__link Вакансии
+

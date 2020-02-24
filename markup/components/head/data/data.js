@@ -39,6 +39,14 @@ var data = {
         mapHead: {
             title: 'Карта дистрибьюции',
             useSocialMetaTags: true,
+        },
+        contactsHead: {
+            title: 'Контакты',
+            useSocialMetaTags: true,
+        },
+        listHead: {
+            title: 'Список',
+            useSocialMetaTags: true,
         }
     }
 };
