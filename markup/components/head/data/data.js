@@ -47,6 +47,18 @@ var data = {
         listHead: {
             title: 'Список',
             useSocialMetaTags: true,
+        },
+        registrationHead: {
+            title: 'Регистрация',
+            useSocialMetaTags: true,
+        },
+        entryHead: {
+            title: 'Вход',
+            useSocialMetaTags: true,
+        },
+        personalHead: {
+            title: 'Личный кабинет',
+            useSocialMetaTags: true,
         }
     }
 };

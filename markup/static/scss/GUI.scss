@@ -68,3 +68,26 @@
         background-repeat: no-repeat;
     }
 }
+
+.btn--transparent {
+    font-size: 14px;
+    color: #2e2e2e;
+
+    @include min($screen-lg) {
+        font-size: 17px;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: 15px 15px 35px rgba(#a3a3a3, .29);
+    }
+}
+
+.btn--border {
+    border: 1px solid #bdbdbd;
+    box-shadow: none;
+
+    &:hover {
+        border: 1px solid #a35cd6;
+    }
+}

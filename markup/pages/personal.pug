@@ -1,0 +1,18 @@
+extends templates/_template
+
+
+block head
+    +head(head.personalHead)
+
+block content
+    +header
+
+    .personal-wrapper
+
+        .container
+            +breadcrumbs()
+                +breadcrumbs-item('Главная', '/')
+                +breadcrumbs-item('Личный кабинет')
+
+        +personal
+
