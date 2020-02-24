@@ -69,6 +69,18 @@
     }
 }
 
+.btn--icon-back {
+    &::before {
+        content: '';
+        margin-right: 15px;
+        width: 15px;
+        height: 20px;
+        background-image: svg-load('arrow-right.svg', fill= '#fff');
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+    }
+}
+
 .btn--transparent {
     font-size: 14px;
     color: #2e2e2e;

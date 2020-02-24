@@ -59,6 +59,10 @@ var data = {
         personalHead: {
             title: 'Личный кабинет',
             useSocialMetaTags: true,
+        },
+        newsHead: {
+            title: 'Новость',
+            useSocialMetaTags: true,
         }
     }
 };
