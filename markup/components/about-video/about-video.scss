@@ -1,0 +1,241 @@
+.about-video {
+    @include row(
+        $grid-gutter-width,
+        $grid-gutter-width,
+        $grid-gutter-width,
+        $grid-gutter-width,
+        18px,
+        18px
+    );
+}
+
+.about-video__big {
+    margin-bottom: 10px;
+    display: flex;
+
+    @include min($screen-md) {
+        margin-bottom: 18px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 0;
+    }
+
+    @include col();
+    @include col(xl, 9, $grid-columns, 18px);
+}
+
+.about-video__small {
+    display: flex;
+    flex-direction: column;
+
+    @include col();
+    @include col(xl, 3, $grid-columns, 18px);
+}
+
+.about-video__big-wrap {
+    position: relative;
+    display: flex;
+    min-height: 180px;
+
+    @include min($screen-md) {
+        min-height: 250px;
+    }
+
+    @include min($screen-lg) {
+        min-height: 340px;
+    }
+
+    @include min($screen-xl) {
+        min-height: 400px;
+    }
+}
+
+.about-video__big-link {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+
+    img,
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    img {
+        position: relative;
+        z-index: 1;
+    }
+
+    &.active {
+        .about-video__video {
+            z-index: 3;
+        }
+    }
+}
+
+.about-video__video {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about-video__big-descr {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.about-video__big-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #fefefe;
+
+    @include min($screen-md) {
+        font-size: 17px;
+    }
+
+    @include min($screen-xl) {
+        font-size: 20px;
+    }
+}
+
+.about-video__btn {
+    margin: 0 auto;
+    display: flex;
+    width: 57px;
+    height: 57px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 18px 67px rgba(0, 0, 0, .27);
+    transition: border $transition-time;
+
+    @include min($screen-md) {
+        width: 88px;
+        height: 88px;
+    }
+
+    //&::after {
+    //    content: '';
+    //    margin-left: 7px;
+    //    width: 20px;
+    //    height: 22px;
+    //    background-image: svg-load('play.svg', color= '#444344');
+    //    background-repeat: no-repeat;
+    //    background-size: cover;
+    //    transition: background $transition-time;
+    //
+    //    @include min($screen-md) {
+    //        margin-left: 9px;
+    //        width: 30px;
+    //        height: 35px;
+    //    }
+    //}
+
+    &:hover {
+        border: 2px solid #a35cd6;
+
+        svg {
+            color: #a35cd6;
+        }
+
+        //&::after {
+        //    background-image: svg-load('play.svg', color= '#a35cd6');
+        //}
+    }
+
+    svg {
+        margin-left: 7px;
+        color: #444344;
+        transition: color $transition-time;
+
+        @include min($screen-md) {
+            margin-left: 9px;
+            width: 30px;
+            height: 35px;
+        }
+    }
+}
+
+.about-video__small-wrap {
+    @include row(18px, 18px, 18px, 18px, $grid-gutter-width, $grid-gutter-width);
+}
+
+.about-video__img {
+    position: relative;
+    margin-bottom: 12px;
+    max-height: 125px;
+    text-decoration: none;
+
+    @include min($screen-md) {
+        margin-bottom: 0;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 12px;
+    }
+
+    &:hover {
+        .about-video__small-text {
+            text-decoration: underline;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include col(xs, $grid-columns, $grid-columns, 18px);
+    @include col(sm, 6, $grid-columns, 18px);
+    @include col(md, 4, $grid-columns, 18px);
+    @include col(xl, 12);
+}
+
+.about-video__small-descr {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 12px 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+    @include min($screen-xl) {
+        padding: 12px 40px;
+    }
+}
+
+.about-video__small-text {
+    margin-bottom: auto;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fefefe;
+}
+
+.about-video__small-time {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fefefe;
+}

@@ -1,10 +1,16 @@
 extends templates/_template
 
 
+
 block head
-    +head(head.defaults)
+    +head(head.main)
 
 block content
+    -var name = 'index';
+
     +header
-    +example
+    +main-slider
+    +main-catalog
+    +main-news
+    //-+example
 

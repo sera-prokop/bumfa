@@ -1,0 +1,53 @@
+.about-gallery {
+    @include row(12px, 12px, 12px, 12px, 18px, 18px);
+}
+
+.about-gallery__item {
+    @include col(xs, 6, $grid-columns, 12px);
+    @include col(md, 4, $grid-columns, 12px);
+    @include col(lg, 3, $grid-columns, 12px);
+    @include col(lg, 3, $grid-columns, 18px);
+
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.about-gallery__link {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        outline: none;
+    }
+}
+
+.about-gallery__img {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-gallery__text {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    @include min($screen-lg) {
+        font-size: 17px;
+    }
+}

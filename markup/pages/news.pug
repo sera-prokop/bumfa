@@ -1,0 +1,20 @@
+extends templates/_template
+
+
+block head
+    +head(head.newsHead)
+
+block content
+
+    +header
+
+    .news-wrapper
+
+        .container
+            +breadcrumbs()
+                +breadcrumbs-item('Главная', '/')
+                +breadcrumbs-item('Видео блог', 'blog.html')
+                +breadcrumbs-item('Вести России')
+
+        +news
+

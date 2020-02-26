@@ -1,0 +1,121 @@
+.sort-field {
+    position: relative;
+    margin-right: 40px;
+    width: 90px;
+
+    &:hover,
+    &:focus {
+        .sort-field__dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &--active {
+        .sort-field__link {
+            color: #b784dd;
+
+            span {
+                border-bottom: 1px solid #b784dd;
+            }
+        }
+    }
+}
+
+.sort-field__wrap {
+    //margin-right: 40px;
+    //width: 90px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: transparent;
+    }
+
+    //&:last-child{
+    //    margin-right: 0;
+    //}
+}
+
+.sort-field__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-field__title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #353535;
+}
+
+.sort-field__input {
+    opacity: .63;
+    font-size: 14px;
+    font-weight: 300;
+    color: #353535;
+    background-color: transparent;
+    border: none;
+}
+
+.sort-field__dropdown {
+    @include nl;
+
+    position: absolute;
+    z-index: 101;
+    top: 60px;
+    left: 50%;
+    padding: 20px 30px;
+    visibility: hidden;
+    min-width: 150px;
+    opacity: 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 38px rgba(0, 0, 0, .09);
+    transform: translateX(-50%);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        width: 26px;
+        height: 26px;
+        background-color: #ffffff;
+        box-shadow: 0 0 38px rgba(0, 0, 0, .09);
+        transform: rotate(45deg) translateX(-50%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13px;
+        background-color: #ffffff;
+    }
+}
+
+.sort-field__dropdown-link {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-decoration: none;
+    color: #353535;
+
+    &:hover {
+        color: #9d4dd6;
+    }
+}
+
+.sort-field__dropdown-img {
+    margin-left: 10px;
+    max-width: 30px;
+}

@@ -1,0 +1,147 @@
+.about-management__list {
+    @include row($grid-gutter-width, 24px, 24px, 24px, 15px, 15px);
+
+    &--big {
+        .about-management__item {
+            @include col(lg, 5, $grid-columns, 24px);
+            @include col(xl, 4, $grid-columns, 15px);
+        }
+
+        .about-management__img {
+            @include min($screen-lg) {
+                margin-bottom: 35px;
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        .about-management__post {
+            @include min($screen-lg) {
+                margin-bottom: 10px;
+                font-size: 15px;
+            }
+        }
+
+        .about-management__name {
+            @include min($screen-lg) {
+                font-size: 18px;
+                line-height: 1.3;
+            }
+        }
+    }
+
+    &--medium {
+        .about-management__item {
+            @include col(xl, 3, $grid-columns, 15px);
+        }
+
+        .about-management__name {
+            @include min($screen-lg) {
+                font-size: 15px;
+                line-height: 1.3;
+            }
+        }
+    }
+
+    &--small {
+        .about-management__item {
+            @include col(xl, 2, 10, 15px);
+        }
+
+        .about-management__wrap {
+            @include min($screen-lg) {
+                padding: 20px;
+            }
+        }
+
+        .about-management__img {
+            @include min($screen-lg) {
+                margin-bottom: 25px;
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        .about-management__post {
+            @include min($screen-lg) {
+                margin-bottom: 5px;
+                font-size: 11px;
+            }
+        }
+
+        .about-management__name {
+            @include min($screen-lg) {
+                font-size: 12px;
+                line-height: 1.3;
+            }
+        }
+
+        .about-management__contacts {
+            @include min($screen-lg) {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.about-management__item {
+    @include col();
+    @include col(sm, 6, $grid-columns, 24px);
+    @include col(lg, 4, $grid-columns, 24px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about-management__wrap {
+    margin-bottom: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    line-height: 1.2;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 13px;
+    box-shadow: 6px 10px 38px rgba(0, 0, 0, .06);
+}
+
+.about-management__img {
+    margin: 0 auto 25px;
+    overflow: hidden;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+}
+
+.about-management__post {
+    margin-top: auto;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #444344;
+}
+
+.about-management__name {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444344;
+}
+
+.about-management__contacts {
+    font-size: 14px;
+
+    a {
+        display: block;
+        line-height: 1.5;
+        font-weight: 400;
+        text-decoration: none;
+        color: #444344;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

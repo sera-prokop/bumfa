@@ -1,0 +1,17 @@
+extends templates/_template
+
+
+block head
+    +head(head.aboutHead)
+
+block content
+    -var name = 'about'
+
+    +header
+    .container
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('О компании')
+
+    +about
+

@@ -1,0 +1,186 @@
+mixin contacts-form(data)
+    section.contacts-form
+
+        .contacts-form__container
+
+            .contacts-form__wrapper
+
+                h2.contacts-form__title Обратная связь
+                p.contacts-form__text Будем Вам благодарны за отзывы о товаре, работе наших подразделений и менеджеров
+
+                .contacts-form__row
+
+                    .contacts-form__error
+                        .error
+                            span Введите корректное поле «Ваше имя»
+                        .error
+                            span Введите корректное вашу почту
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="name") Ваше имя
+                        input.contacts-form__input(id="name" placeholder="Александр")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="phone") Ваш телефон
+                        input.contacts-form__input.phone-mask(id="phone")
+
+                .contacts-form__row
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="email") Ваша почта
+                        input.contacts-form__input(id="email" placeholder="support@gmail.com")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="theme") Тема письма
+                        input.contacts-form__input(id="theme" placeholder="Вопрос сотрудничества")
+
+                .contacts-form__textarea
+                    label.contacts-form__label(for="text") Сообщение
+                    textarea(id="text" placeholder="Начните писать")
+
+
+                .contacts-form__file-upload
+                    +file-upload('paperclip', 'Загрузите файл <i>до 30 мб</i>', 1)
+
+
+                .contacts-form__file-checkbox
+                    +field-checkbox([
+                        {
+                            title: 'Я даю согласие на обработку моих персональных данных',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+
+
+                button(type="submit").btn.btn--purple.btn--icon-arrow Отправить
+
+
+
+
+mixin contacts-form-map(data)
+    section.contacts-form.contacts-form--map
+
+        .contacts-form__container
+
+            .contacts-form__wrapper
+
+                h2.contacts-form__title Стать партнером
+                p.contacts-form__text Мы открыты новым контактам и заинтересованы в развитии нашего бизнеса
+
+                .contacts-form__row
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="name") Ваше имя
+                        input.contacts-form__input(id="name" placeholder="Александр")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="phone") Ваш телефон
+                        input.contacts-form__input.phone-mask(id="phone")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="email") Ваша почта
+                        input.contacts-form__input(id="email" placeholder="support@gmail.com")
+
+                    .contacts-form__field
+                        label.contacts-form__label(for="theme") Тема письма
+                        input.contacts-form__input(id="theme" placeholder="Вопрос сотрудничества")
+
+                    .contacts-form__field.contacts-form__field--file
+                        .contacts-form__file-upload
+                            +file-upload('paperclip', 'Загрузите презентацию вашей компании <i>до 30 мб</i>', 1)
+
+
+
+                button(type="submit").btn.btn--purple Отправить форму
+
+
+
+mixin contacts-form-registration(data)
+    .contacts-form.contacts-form--registration
+
+        .contacts-form__container
+
+            .contacts-form__wrapper
+
+                h2.contacts-form__title Регистрация
+
+                .contacts-form__row
+
+                    .contacts-form__field
+
+                        .contacts-form__field-block
+
+                            label.contacts-form__label(for="email") Почта
+                            input.contacts-form__input(id="email" placeholder="aleks-smi@gmail.com")
+
+                        .contacts-form__field-block
+
+                            label.contacts-form__label(for="company") Название компании
+                            input.contacts-form__input(placeholder="Name company" id="company")
+
+
+                    .contacts-form__field
+
+                        .contacts-form__field-block
+
+                            label.contacts-form__label(for="password") Пароль
+                            input.contacts-form__input(type="password" id="password" placeholder="••••••••••")
+
+                        .contacts-form__field-block
+
+                            label.contacts-form__label(for="password2") Повторите пароль
+                            input.contacts-form__input(type="password" id="password2" placeholder="••••••••••")
+
+
+
+                .contacts-form__file-checkbox
+                    +field-checkbox([
+                        {
+                            title: 'Согласие на обработку моих персональных данных',
+                            attrs: {
+                                name: 'check0',
+                            }
+                        },
+                    ])
+
+
+
+                .contacts-form__btn-submit
+                    button(type="submit").btn.btn--purple.btn--icon-arrow Регистрация
+
+                .contacts-form__btn-entry
+                    a(href="#").btn.btn--transparent Вход
+
+
+
+mixin contacts-form-entry(data)
+    section.contacts-form.contacts-form--entry
+
+        .contacts-form__container
+
+            .contacts-form__wrapper
+
+                h2.contacts-form__title Войти в личный кабинет
+
+                .contacts-form__row
+
+                    .contacts-form__field
+
+                        label.contacts-form__label(for="email") Почта
+                        input.contacts-form__input(id="email" placeholder="aleks-smi@gmail.com")
+
+                    .contacts-form__field
+
+                        label.contacts-form__label(for="password") Пароль
+                        input.contacts-form__input(type="password" id="password" placeholder="••••••••••")
+
+
+
+
+                .contacts-form__btn-submit
+                    button(type="submit").btn.btn--purple.btn--icon-arrow Войти
+
+                .contacts-form__btn-entry
+                    a(href="#").btn.btn--transparent Регистрация

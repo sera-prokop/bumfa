@@ -53,10 +53,12 @@
         "length-zero-no-unit": true,
         "max-empty-lines": 2,
         "max-nesting-depth": 3,
+        "max-empty-lines": 5,
         "no-duplicate-selectors": true,
+        "no-descending-specificity": null,
         "no-invalid-double-slash-comments": true,
         "number-leading-zero": "never",
-        "property-blacklist": ["flex", "order"],
+        "property-blacklist": [],
         "property-no-unknown": true,
         "rule-empty-line-before": [
             "always-multi-line",
@@ -65,7 +67,7 @@
                 ignore: ["after-comment"]
             }
         ],
-        "selector-max-compound-selectors": 2,
+        "selector-max-compound-selectors": 3,
         "selector-max-id": 0,
         "selector-max-type": 1,
         "selector-max-universal": 0,
@@ -80,8 +82,15 @@
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "string-quotes": "single",
-        "unit-blacklist": ["em", "rem"],
         "order/order": [
+            {
+                "type": "at-rule",
+                "name": "include",
+                "parameter": "nl"
+            },
+            "at-variables",
+            "dollar-variables",
+            "custom-properties",
             "declarations",
             {
                 "type": "at-rule",

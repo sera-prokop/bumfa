@@ -1,0 +1,30 @@
+.production-menu {
+    padding: 0 15px;
+    background-color: #ffffff;
+    border-radius: 7px;
+}
+
+.production-menu__item.active {
+    .production-menu__link {
+        font-weight: 500;
+        color: #9d4dd6;
+    }
+}
+
+.production-menu__link {
+    padding: 18px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 300;
+    text-decoration: none;
+    color: #353535;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.production-menu__icon {
+    margin-right: 12px;
+    flex-shrink: 0;
+    color: #9d4dd6;
+}

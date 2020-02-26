@@ -1,0 +1,113 @@
+.main-catalog {
+    position: relative;
+    padding-bottom: 80px;
+    background-color: #f7f6f6;
+    background-image: none;
+    background-repeat: no-repeat;
+
+    @include min($screen-md) {
+        padding-top: 60px;
+        background-image: url('%=static=%assets/main-catalog/decor-1.png'),
+            url('%=static=%assets/main-catalog/decor-2.png');
+        background-position: calc(50% - 570px) 100px, calc(100% + 30px) 50px;
+    }
+
+    @include min($screen-xl) {
+        padding-top: 100px;
+        padding-bottom: 150px;
+        background-position: calc(50% - 780px) 20px, calc(50% + 630px) 100px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% - 30px);
+        display: none;
+        width: 150px;
+        height: 150px;
+        background-image: url(%=static=%assets/main-catalog/decor-3.png);
+        background-repeat: no-repeat;
+
+        @include min($screen-md) {
+            left: calc(50% - 570px);
+            display: block;
+        }
+
+        @include min($screen-xl) {
+            left: calc(50% - 800px);
+        }
+    }
+}
+
+.main-catalog__container {
+    @include container();
+}
+
+.main-catalog__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+    color: #444344;
+
+    @include min($screen-md) {
+        text-align: left;
+    }
+
+    @include min($screen-lg) {
+        margin-bottom: 50px;
+        font-size: 43px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 80px;
+        font-size: 50px;
+    }
+}
+
+.main-catalog__list {
+    @include nl();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include min($screen-md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include min($screen-lg) {
+        justify-content: space-between;
+    }
+}
+
+.main-catalog__item {
+    margin-bottom: 35px;
+
+    @include min($screen-md) {
+        width: 33.3%;
+        text-align: center;
+    }
+
+    @include min($screen-lg) {
+        width: auto;
+    }
+}
+
+.main-catalog__link {
+    display: inline-flex;
+    width: 165px;
+    height: 165px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: box-shadow $transition-time;
+
+    &:focus,
+    &:hover {
+        box-shadow: 0 13px 21px rgba(0, 0, 0, .15);
+    }
+}

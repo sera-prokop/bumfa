@@ -1,0 +1,26 @@
+mixin production-menu(data)
+    ul.production-menu.sticky(data-sticky-for="768" data-margin-top="20")
+        li.production-menu__item
+            a(href="#disk" data-scroll).production-menu__link.smooth-scroll.gumshoe
+                != pugHelpers.Icon.call(locals, {iconName: "circle", className: "production-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Ватные диски
+
+        li.production-menu__item
+            a(href="#stick" data-scroll).production-menu__link.smooth-scroll.gumshoe
+                != pugHelpers.Icon.call(locals, {iconName: "grip-lines-vertical", className: "production-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Ватные палочки
+
+        li.production-menu__item
+            a(href="#napkin" data-scroll).production-menu__link.smooth-scroll.gumshoe
+                != pugHelpers.Icon.call(locals, {iconName: "leaf", className: "production-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Влажные салфетки
+
+        li.production-menu__item
+            a(href="#wrap" data-scroll).production-menu__link.smooth-scroll.gumshoe
+                != pugHelpers.Icon.call(locals, {iconName: "blanket", className: "production-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Бумажные платочки
+
+        li.production-menu__item
+            a(href="#non-stop" data-scroll).production-menu__link.smooth-scroll.gumshoe
+                != pugHelpers.Icon.call(locals, {iconName: "scroll", className: "production-menu__icon", iconWidth: "15", iconHeight: "15"})
+                span Бумажные салфетки(нон-стоп)

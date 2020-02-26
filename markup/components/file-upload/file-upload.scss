@@ -1,0 +1,109 @@
+.js .file-upload__inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-upload__inputfile + label {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    color: $color-main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    box-shadow: 5px 9px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    padding: 10px;
+    //text-decoration: underline;
+    transition: $transition-time;
+
+    &:hover,
+    &:focus {
+        color: darken($color-main, 10%);
+        border: 1px solid #a35cd6;
+
+        .file-puload__icon {
+            background-color: #a35cd6;
+            svg {
+                color: #fff;
+            }
+        }
+
+        span {
+            color: #a35cd6;
+        }
+    }
+
+    &:active {
+        color: darken($color-main, 20%);
+
+        .file-puload__icon {
+            background-color: #9b9c9d;
+        }
+    }
+
+    span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.2;
+        //align-items: center;
+        flex: 1;
+        text-align: left;
+        color: #444344;
+        font-size: 15px;
+        font-weight: 700;
+        transition: $transition-time;
+        min-width: 0;
+    }
+
+    i {
+        font-style: normal;
+        color: #afafaf;
+        font-weight: 400;
+    }
+
+    .file {
+        i {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.no-js .file-upload__inputfile + label {
+    display: none;
+}
+
+.file-upload__inputfile + label svg {
+    vertical-align: middle;
+    color: #444344;
+    flex-shrink: 0;
+    transition: $transition-time;
+}
+
+.file-puload__icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+    margin-right: 25px;
+    border-radius: 50%;
+    transition: $transition-time;
+
+    @include min($screen-lg) {
+        width: 47px;
+        height: 47px;
+        margin-right: 20px;
+    }
+}

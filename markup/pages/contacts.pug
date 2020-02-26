@@ -1,0 +1,23 @@
+extends templates/_template
+
+
+block head
+    +head(head.contactsHead)
+
+block content
+    -var name = 'contacts'
+
+    +header
+    .contacts-wrap
+        .container
+            +breadcrumbs()
+                +breadcrumbs-item('Главная', '/')
+                +breadcrumbs-item('Контакты')
+        +contacts
+
+    +contacts-form
+
+    +territory
+
+
+

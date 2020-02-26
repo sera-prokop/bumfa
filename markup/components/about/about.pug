@@ -1,0 +1,55 @@
+mixin about(data)
+    section.about(data-sticky-container)
+
+        .about__wrap
+
+            .about__container
+
+                .about__row
+
+                    .about__menu
+                        +about-menu
+
+
+
+                    .about__descr
+                        h2.about__title О компании Бумфа Групп
+
+
+                        +about-descr
+
+        .about__wrap.about__wrap--white
+
+            .about__container
+
+                .about__row
+
+                    .about__menu
+
+
+
+                    .about__descr
+
+
+                        #about-management.about-descr__management
+                            h2.about__title Менеджмент компании
+
+                            +about-management
+
+        .about__wrap
+
+            .about__container
+
+                .about__row
+
+                    .about__menu
+
+
+
+                    .about__descr
+
+
+                        #about-gallery.about-descr__gallery
+                            h2.about__title Галерея
+
+                            +about-gallery

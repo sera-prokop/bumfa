@@ -1,0 +1,136 @@
+.main-news {
+    padding: 50px 0;
+    background-color: #ffffff;
+
+    @include min($screen-md) {
+        padding: 60px 0;
+    }
+
+    @include min($screen-xl) {
+        padding: 65px 0;
+    }
+}
+
+.main-news__container {
+    @include container();
+}
+
+.main-news__title {
+    margin: 0 auto 40px;
+    //margin-bottom: 40px;
+
+    max-width: 290px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        max-width: none;
+        font-size: 43px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 50px;
+        font-size: 50px;
+    }
+}
+
+.main-news__list {
+    @include nl;
+    @include row(30px, 30px, 30px, 30px, 30px, 30px);
+}
+
+.main-news__item {
+    @include col();
+    @include col(sm, 6, $grid-columns, 30px);
+    @include col(md, 4, $grid-columns, 30px);
+    @include col(lg, 3, $grid-columns, 30px);
+
+    margin-bottom: 20px;
+    display: flex;
+
+    @include min($screen-md) {
+        margin-bottom: 0;
+
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+
+    @include min($screen-lg) {
+        &:nth-child(4) {
+            display: flex;
+        }
+    }
+}
+
+.main-news__link {
+    margin: 0 auto;
+    display: flex;
+    max-width: 290px;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: -3px 24px 23px rgba(0, 0, 0, .08);
+    transition: box-shadow $transition-time;
+
+    @include min($screen-md) {
+        max-width: none;
+    }
+
+    &:focus,
+    &:hover {
+        outline: none;
+        box-shadow: 0 34px 23px rgba(0, 0, 0, .13);
+    }
+}
+
+.main-news__img {
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+
+    img {
+        @include min($screen-md) {
+            width: 100%;
+        }
+    }
+}
+
+.main-news__descr {
+    padding: 15px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.main-news__descr-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #444344;
+}
+
+.main-news__text {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #949494;
+}
+
+.main-news__date {
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6d6d6d;
+}
+
+.main-news__btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    @include min($screen-xl) {
+        margin-top: 50px;
+    }
+}

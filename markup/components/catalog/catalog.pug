@@ -1,0 +1,87 @@
+mixin catalog(data)
+    section.catalog(data-sticky-container)
+        .catalog__container
+
+            .catalog__row
+
+                .catalog__menu
+                    +catalog-menu(true)
+
+
+
+                .catalog__descr
+                    h2.catalog__title Каталог продукции
+
+                    .catalog__sort
+
+                        .catalog__sort-field
+
+                            +sort-field(
+                                'Новинки',
+                                [
+                                    {
+                                        'title': 'Safira',
+                                        'img': '4'
+                                    },
+                                    {
+                                        'title': 'Welma',
+                                        'img': '5'
+                                    },
+                                ]
+                            )
+
+                        .catalog__sort-field
+                            +sort-field(
+                                'Бренды',
+                                [
+                                    {
+                                        'title': 'Premial',
+                                        'img': '1'
+                                    },
+                                    {
+                                        'title': 'Amra',
+                                        'img': '2'
+                                    },
+                                    {
+                                        'title': 'Safira',
+                                        'img': '4'
+                                    },
+                                    {
+                                        'title': 'Welma',
+                                        'img': '5'
+                                    },
+                                    {
+                                        'title': 'Amra',
+                                        'img': '2'
+                                    },
+                                ]
+                            )
+
+                    .catalog__list
+
+                        .catalog__card
+                            +catalog-card('img-1.png', 'Ватная продукция для детской гигиены', 'Новинка', 'green')
+
+                        .catalog__card
+                            +catalog-card('img-2.png', 'Ватная продукция для детской гигиены', 'Хит', 'red')
+
+                        .catalog__card
+                            +catalog-card('img-3.png', 'Ватная продукция для детской гигиены детской гигиены')
+
+                        .catalog__card
+                            +catalog-card('img-4.png', 'Ватная продукция для детской гигиены')
+
+                        .catalog__card
+                            +catalog-card('img-5.png', 'Ватная продукция для детской гигиены гигиены')
+
+                        .catalog__card
+                            +catalog-card('img-6.png', 'Ватная продукция для детской гигиены')
+
+
+                    .catalog__pagination
+                        +pagination()
+                            +pagination-item('1', '/1', true)
+                            +pagination-item('2', '/2')
+                            +pagination-item('3', '/3')
+                            +pagination-item('...')
+                            +pagination-item('9', '/9')

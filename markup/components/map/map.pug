@@ -1,0 +1,16 @@
+mixin map(data)
+    section.map
+
+        .map__container
+
+            h2.map__title Карта дистрибьюции
+
+        +embed-responsive('map')
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe8954add13042655cb9dd030d07a5518f2ebe25755a03f296dc500b088006d1&amp;lang=ru_RU&amp;scroll=false"></script>
+            //-<iframe src="https://yandex.com/map-widget/v1/?um=constructor%3Abe8954add13042655cb9dd030d07a5518f2ebe25755a03f296dc500b088006d1&amp;source=constructor" frameborder="0"></iframe>
+
+        .map__form
+
+            .map__container
+
+                +contacts-form-map

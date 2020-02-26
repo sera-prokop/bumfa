@@ -1,0 +1,17 @@
+extends templates/_template
+
+
+block head
+    +head(head.mapHead)
+
+block content
+    +header
+
+    .map-wrapper
+        .container
+            +breadcrumbs('blog')
+                +breadcrumbs-item('Главная', '/')
+                +breadcrumbs-item('Карта дистрибьюции')
+
+        +map
+

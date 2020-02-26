@@ -1,0 +1,17 @@
+extends templates/_template
+
+
+block head
+    +head(head.productionHead)
+
+block content
+    +header
+    .container
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Контрактное производство')
+
+    +production
+
+
+

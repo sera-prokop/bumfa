@@ -1,0 +1,149 @@
+// В этом файле должны быть стили для БЭМ-блока field-checkbox, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-checkbox {
+    $block-name: &; // #{$block-name}__element
+
+    margin-bottom: 30px;
+    display: block;
+
+    @include min($screen-lg) {
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        @include field-name;
+    }
+
+    &__input-wrap {
+        & + & {
+            margin-top: $typo-margin-vertical;
+        }
+
+        &--error {
+            #{$block-name}__name-text,
+            #{$block-name}__help-text {
+                color: $color-danger;
+            }
+        }
+    }
+
+    &__name {
+        position: relative;
+        padding-left: 30px;
+        display: inline-block;
+        line-height: $line-height;
+        //margin-right: 0.6em;
+        font-weight: 400;
+    }
+
+    &__name-text {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+
+        // свой чекбокс с картинкой
+
+        // &:before {
+        //   content: '';
+        //   position: absolute;
+        //   top: 5px;
+        //   left: 0;
+        //   width: 14px;
+        //   height: 14px;
+        //   background-image: svg-load('../blocks/field-checkbox/bg-img/checkbox.svg');
+        //   background-size: 100%;
+        // }
+        // @at-root input:checked ~ &:before {
+        //   background-image: svg-load('../blocks/field-checkbox/bg-img/checkbox--checked.svg');
+        // }
+
+        // / свой чекбокс с картинкой
+
+        // свой чекбокс без картинок
+
+        color: #5e5e5e;
+
+        @include min($screen-lg) {
+            font-size: 16px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #8d8d8d;
+            border-radius: 3px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+            background-color: #9d4dd6;
+            border-radius: 3px;
+            //border-left: 2px solid currentColor;
+            //border-bottom: 2px solid currentColor;
+            //transform: rotate(-45deg);
+            //transition: opacity $transition-time;
+            //box-shadow: 1px 2px 0 #fff, inset 0 -2px 0 #fff;
+
+            @at-root input:checked ~ & {
+                opacity: 1;
+            }
+
+            @at-root input:checked:disabled ~ & {
+                border-color: $gray-light;
+            }
+        }
+
+        @at-root input:disabled ~ & {
+            cursor: not-allowed;
+        }
+
+        @at-root input:focus ~ &:before {
+            //@include field-focus;
+            border-color: #9d4dd6;
+        }
+
+        @at-root input:disabled ~ &:before {
+            background: $gray-lighter;
+            border-color: $gray-light;
+        }
+
+        // / свой чекбокс без картинок
+    }
+
+    &__input {
+        position: absolute;
+        top: .7em;
+        left: 0;
+        margin: 0;
+        padding: 0;
+
+        // сокрытие инпута в случае использования своего чекбокса
+        opacity: 0;
+        transform: translateY(-50%);
+
+        &:focus,
+        &:active {
+            @include field-focus;
+        }
+    }
+
+    &__help-text-wrap {
+        padding-left: 1.5em;
+    }
+
+    &__help-text {
+        @include field-help-text;
+    }
+}

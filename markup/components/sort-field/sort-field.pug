@@ -1,0 +1,36 @@
+mixin sort-field(title, props)
+
+    //-
+        +sort-field(
+            'Новинки',
+            [
+                {
+                    'title': 'Premial',
+                    'img': '1'
+                },
+                {
+                    'title': 'Amra',
+                    'img': '2'
+                },
+            ]
+        )
+
+
+
+    .sort-field
+        .sort-field__wrap
+            .sort-field__top
+                h4.sort-field__title=title
+                != pugHelpers.Icon.call(locals, {iconName: "angle-down", className: "", iconWidth: "8", iconHeight: "6"})
+            input.sort-field__input(type="text" value="Все")
+
+
+        ul.sort-field__dropdown
+            each item in props
+                li.sort-field__dropdown-item
+                    a(href="#").sort-field__dropdown-link
+                        span=item.title
+
+                        if item.img
+                            .sort-field__dropdown-img
+                                img(src=`%=static=%img/assets/modal/${item.img}.png` alt="alt")

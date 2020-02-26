@@ -1,0 +1,42 @@
+mixin catalog-menu(last)
+    .catalog-menu.sticky(data-sticky-for="768" data-margin-top="20")
+        ul.catalog-menu__list
+            li.catalog-menu__item
+                a(href="#").catalog-menu__link
+                    != pugHelpers.Icon.call(locals, {iconName: "grip-lines-vertical", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                    span Ватные палочки
+
+            li.catalog-menu__item
+                a(href="#").catalog-menu__link
+                    != pugHelpers.Icon.call(locals, {iconName: "circle", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                    span Ватные диски
+
+            li.catalog-menu__item
+                a(href="#").catalog-menu__link
+                    != pugHelpers.Icon.call(locals, {iconName: "leaf", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                    span Влажные салфетки
+
+            li.catalog-menu__item
+                a(href="#").catalog-menu__link
+                    != pugHelpers.Icon.call(locals, {iconName: "scroll", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                    span Бумажная продукция
+
+            li.catalog-menu__item
+                a(href="#").catalog-menu__link
+                    != pugHelpers.Icon.call(locals, {iconName: "box-open", className: "catalog-menu__icon", iconWidth: "15", iconHeight: "15"})
+                    span Прочее
+
+        if last
+            ul.catalog-menu__list
+
+                li.catalog-menu__item.catalog-menu__item--last
+                    a(href="#").catalog-menu__link
+                        .catalog-menu__img
+                            img(src="%=static=%img/assets/catalog-menu/icon.png" alt="alt")
+                        .catalog-menu__text
+                            span Каталог продукции
+                            span Скачать каталог
+
+
+
+

@@ -1,0 +1,103 @@
+.personal-wrapper {
+    padding-bottom: 60px;
+    background-color: #fafafa;
+
+    .breadcrumbs {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .btn {
+        max-width: 195px;
+    }
+}
+
+.personal__container {
+    @include container();
+}
+
+.personal__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+.personal__row {
+    margin-bottom: 30px;
+
+    @include min($screen-xl) {
+        margin-bottom: 40px;
+    }
+
+    @include row();
+}
+
+.personal__item {
+    margin-bottom: 20px;
+
+    //background-color: #fff;
+    display: flex;
+
+    //justify-content: center;
+
+    min-height: 190px;
+    text-decoration: none;
+
+    @include min($screen-md) {
+        min-height: 260px;
+    }
+
+    @include min($screen-lg) {
+        margin-bottom: 0;
+    }
+
+    @include min($screen-xl) {
+        min-height: 350px;
+    }
+
+    &:hover,
+    &:focus {
+        .personal__wrap {
+            box-shadow: 11px 19px 21px rgba(0, 0, 0, .1);
+        }
+    }
+
+    @include col();
+    @include col(lg, 6);
+}
+
+.personal__wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 7px 10px 10px;
+    box-shadow: 11px 19px 21px rgba(0, 0, 0, .04);
+    transition: box-shadow $transition-time;
+}
+
+.personal__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #444344;
+
+    @include min($screen-lg) {
+        font-size: 17px;
+    }
+}

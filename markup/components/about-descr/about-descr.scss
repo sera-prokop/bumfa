@@ -1,0 +1,135 @@
+.about-descr__video {
+    margin-bottom: 40px;
+
+    @include min($screen-lg) {
+        margin-bottom: 60px;
+    }
+}
+
+.about-descr__edge {
+    margin-bottom: 60px;
+
+    @include min($screen-lg) {
+        margin-bottom: 80px;
+    }
+}
+
+.about-descr__edge-item {
+    margin-bottom: 40px;
+    padding: 20px 20px 35px;
+    background-color: #ffffff;
+    border-radius: 13px;
+
+    @include min($screen-xl) {
+        padding: 20px 35px 35px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--no-icon {
+        .about-descr__edge-icon {
+            display: none;
+        }
+
+        .about-descr__edge-title {
+            margin-left: 0;
+        }
+    }
+}
+
+.about-descr__edge-top {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-descr__edge-icon {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #ffffff;
+    background-image: linear-gradient(-219deg, #a573d9 0%, #9865ce 100%);
+    border-radius: 50%;
+
+    @include min($screen-lg) {
+        width: 45px;
+        height: 45px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        border: 1px solid #f3edfa;
+        border-radius: 50%;
+
+        @include min($screen-lg) {
+            width: 65px;
+            height: 65px;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #dac6ee;
+        border-radius: 50%;
+
+        @include min($screen-lg) {
+            width: 55px;
+            height: 55px;
+        }
+    }
+}
+
+.about-descr__edge-title {
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #9c6ad2;
+
+    @include min($screen-xl) {
+        font-size: 23px;
+    }
+}
+
+.about-descr__edge-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #6a6a6a;
+
+    @include min($screen-lg) {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+.about-descr__management {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include min($screen-lg) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+.about-descr__gallery {
+    padding-top: 50px;
+
+    @include min($screen-lg) {
+        padding-top: 70px;
+    }
+}

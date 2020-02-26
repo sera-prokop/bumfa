@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока breadcrumbs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.breadcrumbs {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0;
+    list-style: none;
+    color: #353535;
+
+    &__item {
+        margin-right: 20px;
+        display: inline-block;
+        font-weight: 300;
+        white-space: nowrap;
+
+        &:not(:last-child)::after {
+            content: '/';
+            margin-left: 20px;
+            display: inline-block;
+            color: #353535;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #353535;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: #353535;
+        }
+    }
+}
+
+.breadcrumbs--blog {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

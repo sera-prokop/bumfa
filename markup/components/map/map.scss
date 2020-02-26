@@ -1,0 +1,46 @@
+.map-wrapper {
+    background-color: #fafafa;
+}
+
+.map__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #444344;
+
+    @include min($screen-md) {
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    @include min($screen-xl) {
+        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+.map__form {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+
+    @include min($screen-lg) {
+        background-image: url('%=static=%assets/contacts-form/decor-1.png'),
+            url('%=static=%assets/contacts-form/decor-2.png'),
+            url('%=static=%assets/contacts-form/decor-2.png');
+        background-position: calc(50% + 500px) 100px, calc(50% + 500px) 400px,
+            calc(50% - 500px) 80px;
+    }
+
+    @include min($screen-xl) {
+        background-position: calc(50% + 500px) 100px, calc(50% + 500px) 400px,
+            calc(50% - 700px) 80px;
+    }
+}
+
+.map__container {
+    @include container();
+}

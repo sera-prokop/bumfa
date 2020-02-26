@@ -1,0 +1,17 @@
+extends templates/_template
+
+
+block head
+    +head(head.blogHead)
+
+block content
+    -var name = 'blog'
+
+    +header
+    .blog-wrapper
+        .container
+            +breadcrumbs('blog')
+                +breadcrumbs-item('Главная', '/')
+                +breadcrumbs-item('Новости')
+
+        +blog

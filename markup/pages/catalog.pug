@@ -1,0 +1,18 @@
+extends templates/_template
+
+
+block head
+    +head(head.catalogHead)
+
+block content
+    -var name = 'catalog';
+
+    +header
+    .container
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Каталог продукции', 'catalog.html')
+            +breadcrumbs-item('Ватные диски')
+
+    +catalog
+
