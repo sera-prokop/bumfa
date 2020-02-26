@@ -242,3 +242,88 @@
         flex-direction: column;
     }
 }
+
+.modal--form {
+    .modal__dialog {
+        @media (min-width: $screen-lg) {
+            margin: auto;
+            width: 750px;
+            border-radius: 13px;
+        }
+    }
+
+    .modal__content {
+        @media (min-width: $screen-lg) {
+            border-radius: 13px;
+        }
+    }
+
+    .modal__header {
+        padding: 35px;
+
+        @include min($screen-md) {
+            padding: 35px 55px;
+        }
+
+        @include min($screen-md) {
+            padding: 50px 60px;
+        }
+    }
+
+    .modal__close {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 50%;
+        cursor: pointer;
+
+        @include min($screen-lg) {
+            top: 20px;
+            right: -25px;
+        }
+
+        @include min($screen-xl) {
+            width: 55px;
+            height: 55px;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            background-image: svg-load('times.svg', color= '#444344');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    .modal__title {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+        color: #444344;
+
+        @include min($screen-md) {
+            font-size: 42px;
+        }
+
+        @include min($screen-xl) {
+            font-size: 50px;
+        }
+    }
+
+    .modal__body {
+        padding: 0 35px 35px;
+
+        @include min($screen-md) {
+            padding: 0 55px 55px;
+        }
+
+        @include min($screen-xl) {
+            padding: 0 60px 60px;
+        }
+    }
+}

@@ -51,7 +51,6 @@
         "function-linear-gradient-no-nonstandard-direction": true,
         "function-whitespace-after": "always",
         "length-zero-no-unit": true,
-        "max-empty-lines": 2,
         "max-nesting-depth": 3,
         "max-empty-lines": 5,
         "no-duplicate-selectors": true,
@@ -334,6 +333,6 @@
             "will-change",
             "cursor",
             "user-select",
-        ],
+        ]
     }
 }

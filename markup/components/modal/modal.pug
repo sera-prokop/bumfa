@@ -123,3 +123,63 @@ mixin modals()
                     a(href="#").header-menu__link
                         span Контакты
 
+
+    +modal('form', 'Отправить резюме', 'form')
+        .modal__body
+            .contacts-form__row
+
+                .contacts-form__field
+                    label.contacts-form__label(for="name") Ваше имя
+                    input.contacts-form__input(id="name" placeholder="Александр")
+
+                .contacts-form__field
+                    label.contacts-form__label(for="phone") Ваш телефон
+                    input.contacts-form__input.phone-mask(id="phone")
+
+            .contacts-form__row
+
+                .contacts-form__field
+                    label.contacts-form__label(for="email") Ваша почта
+                    input.contacts-form__input(id="email" placeholder="support@gmail.com")
+
+                .contacts-form__field
+                    label.contacts-form__label(for="post") Должность
+                    input.contacts-form__input(id="post" placeholder="Руководитель маркетинг отдела")
+
+            .contacts-form__row
+
+                .contacts-form__field
+                    label.contacts-form__label(for="education") Образование
+                    input.contacts-form__input(id="education" placeholder="Бакалавр инженерии")
+
+                .contacts-form__field
+                    label.contacts-form__label(for="skill") Опыт работы
+                    input.contacts-form__input(id="skill" placeholder="2 года")
+
+            .contacts-form__row
+
+                .contacts-form__field
+                    label.contacts-form__label(for="resume") Ссылка на резюме
+                    input.contacts-form__input(id="resume" placeholder="hh.ru/profile/rezume_2314")
+
+            .contacts-form__textarea
+                label.contacts-form__label(for="text-modal") Сообщение
+                textarea(id="text-modal" placeholder="Начните писать")
+
+
+            .contacts-form__file-upload
+                +file-upload('paperclip', 'Загрузите файл <i>до 30 мб</i>', 1)
+
+
+            .contacts-form__file-checkbox
+                +field-checkbox([
+                    {
+                        title: 'Я даю согласие на обработку моих персональных данных',
+                        attrs: {
+                            name: 'check0',
+                        }
+                    },
+                ])
+
+
+            button(type="submit").btn.btn--purple.btn--icon-arrow Отправить
