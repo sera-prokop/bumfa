@@ -57,4 +57,5 @@ import 'components/header-menu/header-menu';
 import 'components/sort-field/sort-field';
 import 'components/file-upload/file-upload';
 import 'components/catalog-modal/catalog-modal';
+import 'components/about-video/about-video';
 // import 'components/production-menu/production-menu';

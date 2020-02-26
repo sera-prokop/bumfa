@@ -52,18 +52,41 @@
 }
 
 .about-video__big-link {
+    position: relative;
     display: flex;
     text-decoration: none;
 
-    img {
+    img,
+    video {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
+    img {
+        position: relative;
+        z-index: 1;
+    }
+
+    &.active {
+        .about-video__video {
+            z-index: 3;
+        }
+    }
+}
+
+.about-video__video {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .about-video__big-descr {
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     padding: 0 10px;
