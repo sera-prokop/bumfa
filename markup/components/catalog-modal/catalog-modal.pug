@@ -36,5 +36,48 @@ mixin catalog-modal(data)
                             p ООО «Бумфа Групп» - современное, динамично развивающееся предприятие. Основной сферой деятельности является производство и реализация продукции санитарно-гигиенического и косметического назначения. Кроме того, это первое в России предприятие полного цикла производства косметической ватной продукции. На сегодняшний день у компании десятки контрактов с федеральными сетями, как на поставку собственной продукции, так и на производство товаров под частными марками.
 
                         .catalog-modal__btn
-                            a(href="#").btn.btn--icon-arrow.btn--purple Заказать дизайн
+                            a(href="map.html#partner").btn.btn--icon-arrow.btn--purple Заказать дизайн
+
+
+
+
+mixin catalog-modal2(data)
+    .catalog-modal
+        .catalog-modal__container
+
+            .catalog-modal__row
+
+                .catalog-modal__slider
+                    .swiper-container.catalog-modal__slider-container
+                        .swiper-wrapper
+                            .swiper-slide.catalog-modal__slide
+                                .catalog-modal__img
+                                    img(src="%=static=%img/assets/catalog-card/img-1.png" alt="alt")
+                            .swiper-slide.catalog-modal__slide
+                                .catalog-modal__img
+                                    img(src="%=static=%img/assets/catalog-card/design-1.png" alt="alt")
+                            .swiper-slide.catalog-modal__slide
+                                .catalog-modal__img
+                                    img(src="%=static=%img/assets/catalog-card/img-2.png" alt="alt")
+                    .swiper-button-prev.catalog-modal__prev
+                    .swiper-button-next.catalog-modal__next
+
+
+                .catalog-modal__descr
+
+                    .catalog-modal__descr-wrap
+
+                        h3.catalog-modal__title Частная марка Safira
+                        ul.catalog-modal__list
+                            li.catalog-modal__item Параметр 1: Свойство 1
+                            li.catalog-modal__item Параметр 2: Свойство 2
+                            li.catalog-modal__item Параметр 3: Свойство 3
+                            li.catalog-modal__item Параметр 4: Свойство 4
+
+
+                        .catalog-modal__text
+                            p ООО «Бумфа Групп» - современное, динамично развивающееся предприятие. Основной сферой деятельности является производство и реализация продукции санитарно-гигиенического и косметического назначения. Кроме того, это первое в России предприятие полного цикла производства косметической ватной продукции. На сегодняшний день у компании десятки контрактов с федеральными сетями, как на поставку собственной продукции, так и на производство товаров под частными марками.
+
+                        .catalog-modal__btn
+                            a(href="#design" data-toggle="modal" data-dismiss="modal").btn.btn--icon-arrow.btn--purple Заказать дизайн
 

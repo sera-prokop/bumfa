@@ -22,3 +22,27 @@ mixin catalog-card(img, text, tag, tagClass)
 
 
 
+mixin catalog-card2(img, text, tag, tagClass)
+
+    //-
+        +catalog-card('img-1', 'Ватная продукция для детской гигиены', 'Новинка', 'red')
+
+
+    .catalog-card
+
+        a(href="#").catalog-card__link
+
+            .catalog-card__tag(class=tagClass ? tagClass : '')=tag
+
+            .catalog-card__img
+                img(src=`%=static=%img/assets/catalog-card/${img}` alt="alt")
+
+            .catalog-card__text=text
+
+
+        +modal('', 'Частная марка Safira', 'catalog')
+            .modal__body
+                +catalog-modal2
+
+
+

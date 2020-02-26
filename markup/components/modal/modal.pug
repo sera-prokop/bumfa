@@ -183,3 +183,46 @@ mixin modals()
 
 
             button(type="submit").btn.btn--purple.btn--icon-arrow Отправить
+
+
+
+    +modal('design', 'Заказать дизайн', 'form')
+        .modal__body
+            .contacts-form__row
+
+                .contacts-form__field
+                    label.contacts-form__label(for="name3") Ваше имя
+                    input.contacts-form__input(id="name3" placeholder="Александр")
+
+                .contacts-form__field
+                    label.contacts-form__label(for="phone3") Ваш телефон
+                    input.contacts-form__input.phone-mask(id="phone3")
+
+            .contacts-form__row
+
+                .contacts-form__field
+                    label.contacts-form__label(for="email3") Ваша почта
+                    input.contacts-form__input(id="email3" placeholder="support@gmail.com")
+
+                .contacts-form__field
+                    label.contacts-form__label(for="company3") Название компании
+                    input.contacts-form__input(placeholder="Name company" id="company3")
+
+
+            .contacts-form__textarea
+                label.contacts-form__label(for="text-modal3") Опишите задачу
+                textarea(id="text-modal3" placeholder="Начните писать")
+
+
+            .contacts-form__file-checkbox
+                +field-checkbox([
+                    {
+                        title: 'Я даю согласие на обработку моих персональных данных',
+                        attrs: {
+                            name: 'check4',
+                        }
+                    },
+                ])
+
+
+            button(type="submit").btn.btn--purple.btn--icon-arrow Отправить запрос
