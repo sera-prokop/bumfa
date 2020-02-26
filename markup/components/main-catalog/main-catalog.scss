@@ -9,13 +9,13 @@
         padding-top: 60px;
         background-image: url('%=static=%assets/main-catalog/decor-1.png'),
             url('%=static=%assets/main-catalog/decor-2.png');
-        background-position: -70px 120px, calc(100% + 30px) 50px;
+        background-position: calc(50% - 570px) 100px, calc(100% + 30px) 50px;
     }
 
     @include min($screen-xl) {
         padding-top: 100px;
         padding-bottom: 150px;
-        background-position: calc(50% - 730px) 20px, calc(50% + 630px) 100px;
+        background-position: calc(50% - 780px) 20px, calc(50% + 630px) 100px;
     }
 
     &::after {

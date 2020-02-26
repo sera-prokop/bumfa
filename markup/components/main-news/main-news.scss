@@ -43,6 +43,7 @@
 
 .main-news__item {
     @include col();
+    @include col(sm, 6, $grid-columns, 30px);
     @include col(md, 4, $grid-columns, 30px);
     @include col(lg, 3, $grid-columns, 30px);
 

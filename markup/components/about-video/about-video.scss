@@ -106,28 +106,44 @@
         height: 88px;
     }
 
-    &::after {
-        content: '';
+    //&::after {
+    //    content: '';
+    //    margin-left: 7px;
+    //    width: 20px;
+    //    height: 22px;
+    //    background-image: svg-load('play.svg', color= '#444344');
+    //    background-repeat: no-repeat;
+    //    background-size: cover;
+    //    transition: background $transition-time;
+    //
+    //    @include min($screen-md) {
+    //        margin-left: 9px;
+    //        width: 30px;
+    //        height: 35px;
+    //    }
+    //}
+
+    &:hover {
+        border: 2px solid #a35cd6;
+
+        svg {
+            color: #a35cd6;
+        }
+
+        //&::after {
+        //    background-image: svg-load('play.svg', color= '#a35cd6');
+        //}
+    }
+
+    svg {
         margin-left: 7px;
-        width: 20px;
-        height: 22px;
-        background-image: svg-load('play.svg', color= '#444344');
-        background-repeat: no-repeat;
-        background-size: cover;
-        transition: background $transition-time;
+        color: #444344;
+        transition: color $transition-time;
 
         @include min($screen-md) {
             margin-left: 9px;
             width: 30px;
             height: 35px;
-        }
-    }
-
-    &:hover {
-        border: 2px solid #a35cd6;
-
-        &::after {
-            background-image: svg-load('play.svg', color= '#a35cd6');
         }
     }
 }

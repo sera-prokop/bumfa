@@ -20,6 +20,10 @@
     background-color: #ffffff;
     border-radius: 13px;
 
+    @include min($screen-xl) {
+        padding: 20px 35px 35px;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -108,6 +112,7 @@
 
     @include min($screen-lg) {
         font-size: 15px;
+        line-height: 24px;
     }
 }
 

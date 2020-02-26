@@ -13,6 +13,7 @@ mixin about-video(data)
                         p.about-video__big-text Посмотрите 5 минутное видео о компании BUMFA GROUP
 
                         span.about-video__btn
+                            != pugHelpers.Icon.call(locals, {iconName: "play", className: "", iconWidth: "20", iconHeight: "22"})
 
 
         .about-video__small

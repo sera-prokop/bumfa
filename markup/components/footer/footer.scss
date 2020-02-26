@@ -189,7 +189,7 @@
 
 .footer__social-block {
     @include min($screen-xl) {
-        width: 20%;
+        width: 15%;
         //margin-left: auto;
     }
 
@@ -241,6 +241,7 @@
     }
 
     @include min($screen-xl) {
+        margin-left: 10px;
         width: 20%;
     }
 
