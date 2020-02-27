@@ -326,4 +326,47 @@
             padding: 0 60px 60px;
         }
     }
+
+    &.vacancies-form {
+        .modal__header {
+            @include min($screen-md) {
+                padding: 25px 30px;
+            }
+        }
+
+        .modal__title {
+            margin: 0;
+        }
+
+        .modal__body {
+            padding-bottom: 30px;
+        }
+
+        .contacts-form__textarea {
+            @include min($screen-lg) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .contacts-form__file-upload {
+            margin-bottom: 15px;
+        }
+
+        .field-checkbox {
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            @include min($screen-md) {
+                padding-top: 15px;
+                height: 100px;
+            }
+        }
+
+        .contacts-form__field {
+            @include min($screen-lg) {
+                margin-bottom: 15px;
+            }
+        }
+    }
 }

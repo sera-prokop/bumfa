@@ -12,7 +12,7 @@
         <meta name="HandheldFriendly" content="true">
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/main14f2yh.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <meta property="og:title" content="#{data.title}">
         <meta property="og:title" content="">
@@ -279,7 +279,6 @@
                                         <div class="about-video">
                                             <div class="about-video__big">
                                                 <div class="about-video__big-wrap">
-                                                    <!--a(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk").about-video__big-link-->
                                                     <a class="about-video__big-link" href="#">
                                                         <img src="static/img/assets/about-video/video.jpg" alt="alt">
                                                         <div class="about-video__video">
@@ -301,31 +300,21 @@
                                             </div>
                                             <div class="about-video__small">
                                                 <div class="about-video__small-wrap">
-                                                    <!--a(data-fancybox href="https://vimeo.com/191947042").about-video__img-->
-                                                    <a class="about-video__img" href="#">
+                                                    <a class="about-video__img" href="#" data-time="10.0">
                                                         <img src="static/img/assets/about-video/img-1.jpg" alt="alt">
                                                         <div class="about-video__small-descr">
                                                             <h4 class="about-video__small-text">Производство</h4>
                                                             <div class="about-video__small-time">00:00:15</div>
                                                         </div>
                                                     </a>
-                                                    <!--a(data-fancybox href="#myVideo").about-video__img-->
-                                                    <a class="about-video__img" href="#">
+                                                    <a class="about-video__img" href="#" data-time="20.0">
                                                         <img src="static/img/assets/about-video/img-2.jpg" alt="alt">
                                                         <div class="about-video__small-descr">
                                                             <h4 class="about-video__small-text">Материалы</h4>
                                                             <div class="about-video__small-time">00:00:55</div>
                                                         </div>
-                                                        <!--video#myVideo(width='640', height='320', controls='', style='display:none;')
-                                  source(src='https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4', type='video/mp4')
-                                  source(src='https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm', type='video/webm')
-                                  source(src='https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv', type='video/ogg')
-                                  |     Your browser doesn&apos;t support HTML5 video tag.
-                                  
-                                  -->
                                                     </a>
-                                                    <!--a(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk").about-video__img-->
-                                                    <a class="about-video__img" href="#">
+                                                    <a class="about-video__img" href="#" data-time="30.0">
                                                         <img src="static/img/assets/about-video/img-3.jpg" alt="alt">
                                                         <div class="about-video__small-descr">
                                                             <h4 class="about-video__small-text">О компании</h4>
@@ -569,68 +558,93 @@
                                     <h2 class="about__title">Галерея</h2>
                                     <ul class="about-gallery">
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-1.jpg" data-fancybox="gallery">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-1.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Производственный цех</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                                <a data-fancybox="gallery" href="https://source.unsplash.com/O7qK1vQY3p0/1519x2279"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-2.jpg" data-fancybox="gallery-2">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-2.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Распределительная</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-2" href="https://source.unsplash.com/ty4X72BSsXY/416x278"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-3.jpg" data-fancybox="gallery-3">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-3.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Производство</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-3" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-4.jpg" data-fancybox="gallery-4">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-4.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Материалы</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-4" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-5.jpg" data-fancybox="gallery-5">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-5.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Изготовление материала</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-5" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-6.jpg" data-fancybox="gallery-6">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-6.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Переработка сырья</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-6" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-7.jpg" data-fancybox="gallery-7">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-7.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Упаковка</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-7" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                            </div>
                                         </li>
                                         <li class="about-gallery__item">
-                                            <a class="about-gallery__link" href="#">
+                                            <a class="about-gallery__link" href="static/img/assets/about-gallery/img-8.jpg" data-fancybox="gallery-8">
                                                 <div class="about-gallery__img">
                                                     <img src="static/img/assets/about-gallery/img-8.jpg" alt="alt">
                                                 </div>
                                                 <h4 class="about-gallery__text">Упаковочный станок</h4>
                                             </a>
+                                            <div class="about-gallery__hide" style="display: none;">
+                                                <a data-fancybox="gallery-8" href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304"></a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -887,10 +901,55 @@
                 </div>
             </div>
         </div>
+        <div class="modal  modal--form" id="design" tabindex="-1" role="dialog">
+            <div class="modal__dialog" role="document">
+                <div class="modal__content">
+                    <div class="modal__header"><span class="close modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+                        <h4 class="modal__title">Заказать дизайн</h4>
+                    </div>
+                    <div class="modal__body">
+                        <div class="contacts-form__row">
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="name3">Ваше имя</label>
+                                <input class="contacts-form__input" id="name3" placeholder="Александр">
+                            </div>
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="phone3">Ваш телефон</label>
+                                <input class="contacts-form__input phone-mask" id="phone3">
+                            </div>
+                        </div>
+                        <div class="contacts-form__row">
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="email3">Ваша почта</label>
+                                <input class="contacts-form__input" id="email3" placeholder="support@gmail.com">
+                            </div>
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="company3">Название компании</label>
+                                <input class="contacts-form__input" placeholder="Name company" id="company3">
+                            </div>
+                        </div>
+                        <div class="contacts-form__textarea">
+                            <label class="contacts-form__label" for="text-modal3">Опишите задачу</label>
+                            <textarea id="text-modal3" placeholder="Начните писать"></textarea>
+                        </div>
+                        <div class="contacts-form__file-checkbox">
+                            <div class="field-checkbox">
+                                <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="checkbox" name="check4"><span class="field-checkbox__name-text">Я даю согласие на обработку моих персональных данных</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn--purple btn--icon-arrow" type="submit">Отправить запрос</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="static/js/separate-js/vendor.js"></script>
-        <script src="static/js/main14f2yh.min.js"></script>
+        <script src="static/js/main.min.js"></script>
     </body>
 
 </html>

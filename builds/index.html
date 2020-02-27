@@ -12,7 +12,7 @@
         <meta name="HandheldFriendly" content="true">
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/main14f2yh.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <meta property="og:title" content="#{data.title}">
         <meta property="og:title" content="">
@@ -620,10 +620,55 @@
                 </div>
             </div>
         </div>
+        <div class="modal  modal--form" id="design" tabindex="-1" role="dialog">
+            <div class="modal__dialog" role="document">
+                <div class="modal__content">
+                    <div class="modal__header"><span class="close modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+                        <h4 class="modal__title">Заказать дизайн</h4>
+                    </div>
+                    <div class="modal__body">
+                        <div class="contacts-form__row">
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="name3">Ваше имя</label>
+                                <input class="contacts-form__input" id="name3" placeholder="Александр">
+                            </div>
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="phone3">Ваш телефон</label>
+                                <input class="contacts-form__input phone-mask" id="phone3">
+                            </div>
+                        </div>
+                        <div class="contacts-form__row">
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="email3">Ваша почта</label>
+                                <input class="contacts-form__input" id="email3" placeholder="support@gmail.com">
+                            </div>
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="company3">Название компании</label>
+                                <input class="contacts-form__input" placeholder="Name company" id="company3">
+                            </div>
+                        </div>
+                        <div class="contacts-form__textarea">
+                            <label class="contacts-form__label" for="text-modal3">Опишите задачу</label>
+                            <textarea id="text-modal3" placeholder="Начните писать"></textarea>
+                        </div>
+                        <div class="contacts-form__file-checkbox">
+                            <div class="field-checkbox">
+                                <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="checkbox" name="check4"><span class="field-checkbox__name-text">Я даю согласие на обработку моих персональных данных</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn--purple btn--icon-arrow" type="submit">Отправить запрос</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="static/js/separate-js/vendor.js"></script>
-        <script src="static/js/main14f2yh.min.js"></script>
+        <script src="static/js/main.min.js"></script>
     </body>
 
 </html>
